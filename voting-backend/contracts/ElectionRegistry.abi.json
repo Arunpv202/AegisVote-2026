@@ -1,0 +1,2351 @@
+{
+    "abi": [
+        {
+            "type": "function",
+            "name": "authorityIdToIndex",
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "createElection",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "electionName",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "creatorName",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "preelectionDataStartTime",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "preelectionDataEndTime",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "electionStartTime",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "electionEndTime",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "resultTime",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "AuthorityNames",
+                    "type": "string[]",
+                    "internalType": "string[]"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "dkgCommitments",
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes",
+                    "internalType": "bytes"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "electionAuthorities",
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "authorityId",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "authorityName",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "publicKey",
+                    "type": "bytes",
+                    "internalType": "bytes"
+                },
+                {
+                    "name": "publicKeyProof",
+                    "type": "bytes",
+                    "internalType": "bytes"
+                },
+                {
+                    "name": "round1Done",
+                    "type": "bool",
+                    "internalType": "bool"
+                },
+                {
+                    "name": "round2Done",
+                    "type": "bool",
+                    "internalType": "bool"
+                },
+                {
+                    "name": "decryptionDone",
+                    "type": "bool",
+                    "internalType": "bool"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "elections",
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "string",
+                    "internalType": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "electionName",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "creatorName",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "startTime",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "endTime",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "resultTime",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "threshold",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "degree",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "faceDatabaseHash",
+                    "type": "bytes32",
+                    "internalType": "bytes32"
+                },
+                {
+                    "name": "registrationMerkleRoot",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "electionPublicKey",
+                    "type": "bytes",
+                    "internalType": "bytes"
+                },
+                {
+                    "name": "preElectionDAGRoot",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "preelectionDataStartTime",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "preelectionDataEndTime",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "initialized",
+                    "type": "bool",
+                    "internalType": "bool"
+                },
+                {
+                    "name": "setupDone",
+                    "type": "bool",
+                    "internalType": "bool"
+                },
+                {
+                    "name": "completed",
+                    "type": "bool",
+                    "internalType": "bool"
+                },
+                {
+                    "name": "round1Active",
+                    "type": "bool",
+                    "internalType": "bool"
+                },
+                {
+                    "name": "round2Active",
+                    "type": "bool",
+                    "internalType": "bool"
+                },
+                {
+                    "name": "finalizedDKG",
+                    "type": "bool",
+                    "internalType": "bool"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "encryptedTallies",
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes",
+                    "internalType": "bytes"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "encryptedVotehash",
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "",
+                    "type": "string",
+                    "internalType": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32",
+                    "internalType": "bytes32"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "finalVoteCount",
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "",
+                    "type": "string",
+                    "internalType": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "finalizeElectionSetup",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "polynomial_degree",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "registrationMerkleRoot",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "faceDatabaseHash",
+                    "type": "bytes32",
+                    "internalType": "bytes32"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "getAuthorities",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "tuple[]",
+                    "internalType": "struct IElectionRegistry.Authority[]",
+                    "components": [
+                        {
+                            "name": "authorityId",
+                            "type": "uint256",
+                            "internalType": "uint256"
+                        },
+                        {
+                            "name": "authorityName",
+                            "type": "string",
+                            "internalType": "string"
+                        },
+                        {
+                            "name": "publicKey",
+                            "type": "bytes",
+                            "internalType": "bytes"
+                        },
+                        {
+                            "name": "publicKeyProof",
+                            "type": "bytes",
+                            "internalType": "bytes"
+                        },
+                        {
+                            "name": "round1Done",
+                            "type": "bool",
+                            "internalType": "bool"
+                        },
+                        {
+                            "name": "round2Done",
+                            "type": "bool",
+                            "internalType": "bool"
+                        },
+                        {
+                            "name": "decryptionDone",
+                            "type": "bool",
+                            "internalType": "bool"
+                        }
+                    ]
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "getAuthoritiesBasic",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "authorityIds",
+                    "type": "uint256[]",
+                    "internalType": "uint256[]"
+                },
+                {
+                    "name": "authorityNames",
+                    "type": "string[]",
+                    "internalType": "string[]"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "getAuthorityActivity",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "authorityId",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "publicKey",
+                    "type": "bytes",
+                    "internalType": "bytes"
+                },
+                {
+                    "name": "round1Done",
+                    "type": "bool",
+                    "internalType": "bool"
+                },
+                {
+                    "name": "round2Done",
+                    "type": "bool",
+                    "internalType": "bool"
+                },
+                {
+                    "name": "decryptionDone",
+                    "type": "bool",
+                    "internalType": "bool"
+                },
+                {
+                    "name": "commitments",
+                    "type": "bytes[]",
+                    "internalType": "bytes[]"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "getCommitments",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "authorityId",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes[]",
+                    "internalType": "bytes[]"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "getElectionDetails",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "tuple",
+                    "internalType": "struct IElectionRegistry.Election",
+                    "components": [
+                        {
+                            "name": "electionId",
+                            "type": "string",
+                            "internalType": "string"
+                        },
+                        {
+                            "name": "electionName",
+                            "type": "string",
+                            "internalType": "string"
+                        },
+                        {
+                            "name": "creatorName",
+                            "type": "string",
+                            "internalType": "string"
+                        },
+                        {
+                            "name": "candidateNames",
+                            "type": "string[]",
+                            "internalType": "string[]"
+                        },
+                        {
+                            "name": "startTime",
+                            "type": "uint256",
+                            "internalType": "uint256"
+                        },
+                        {
+                            "name": "endTime",
+                            "type": "uint256",
+                            "internalType": "uint256"
+                        },
+                        {
+                            "name": "resultTime",
+                            "type": "uint256",
+                            "internalType": "uint256"
+                        },
+                        {
+                            "name": "threshold",
+                            "type": "uint256",
+                            "internalType": "uint256"
+                        },
+                        {
+                            "name": "degree",
+                            "type": "uint256",
+                            "internalType": "uint256"
+                        },
+                        {
+                            "name": "faceDatabaseHash",
+                            "type": "bytes32",
+                            "internalType": "bytes32"
+                        },
+                        {
+                            "name": "registrationMerkleRoot",
+                            "type": "string",
+                            "internalType": "string"
+                        },
+                        {
+                            "name": "electionPublicKey",
+                            "type": "bytes",
+                            "internalType": "bytes"
+                        },
+                        {
+                            "name": "preElectionDAGRoot",
+                            "type": "string",
+                            "internalType": "string"
+                        },
+                        {
+                            "name": "preelectionDataStartTime",
+                            "type": "uint256",
+                            "internalType": "uint256"
+                        },
+                        {
+                            "name": "preelectionDataEndTime",
+                            "type": "uint256",
+                            "internalType": "uint256"
+                        },
+                        {
+                            "name": "initialized",
+                            "type": "bool",
+                            "internalType": "bool"
+                        },
+                        {
+                            "name": "setupDone",
+                            "type": "bool",
+                            "internalType": "bool"
+                        },
+                        {
+                            "name": "completed",
+                            "type": "bool",
+                            "internalType": "bool"
+                        },
+                        {
+                            "name": "round1Active",
+                            "type": "bool",
+                            "internalType": "bool"
+                        },
+                        {
+                            "name": "round2Active",
+                            "type": "bool",
+                            "internalType": "bool"
+                        },
+                        {
+                            "name": "finalizedDKG",
+                            "type": "bool",
+                            "internalType": "bool"
+                        }
+                    ]
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "getEncryptedTally",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes[]",
+                    "internalType": "bytes[]"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "getFinalResult",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "candidates",
+                    "type": "string[]",
+                    "internalType": "string[]"
+                },
+                {
+                    "name": "counts",
+                    "type": "uint256[]",
+                    "internalType": "uint256[]"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "nullifierUsed",
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "",
+                    "type": "string",
+                    "internalType": "string"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bool",
+                    "internalType": "bool"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "partialDecryptionhash",
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "bytes32",
+                    "internalType": "bytes32"
+                }
+            ],
+            "stateMutability": "view"
+        },
+        {
+            "type": "function",
+            "name": "preelectionendsonly",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "preElectionDAGRoot",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "candidateNames",
+                    "type": "string[]",
+                    "internalType": "string[]"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "publishEncryptedTally",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "encryptedTally",
+                    "type": "bytes[]",
+                    "internalType": "bytes[]"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "publishFinalResult",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "finalCounts",
+                    "type": "uint256[]",
+                    "internalType": "uint256[]"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "setElectionPublicKey",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "electionPublicKey",
+                    "type": "bytes",
+                    "internalType": "bytes"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "setRound1Active",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "setRound2Active",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "submitDKGRound1",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "authorityId",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "publicKey",
+                    "type": "bytes",
+                    "internalType": "bytes"
+                },
+                {
+                    "name": "publicKeyProof",
+                    "type": "bytes",
+                    "internalType": "bytes"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "submitDKGRound2",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "authorityId",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "commitments",
+                    "type": "bytes[]",
+                    "internalType": "bytes[]"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "submitPartialDecryption",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "authorityId",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "partialdecryptionhash",
+                    "type": "bytes32",
+                    "internalType": "bytes32"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "function",
+            "name": "submitVote",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "nullifier",
+                    "type": "string",
+                    "internalType": "string"
+                },
+                {
+                    "name": "encryptedVotehashes",
+                    "type": "bytes32",
+                    "internalType": "bytes32"
+                }
+            ],
+            "outputs": [],
+            "stateMutability": "nonpayable"
+        },
+        {
+            "type": "event",
+            "name": "AuthorityAdded",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "indexed": false,
+                    "internalType": "string"
+                },
+                {
+                    "name": "authorityId",
+                    "type": "uint256",
+                    "indexed": false,
+                    "internalType": "uint256"
+                },
+                {
+                    "name": "authorityIndex",
+                    "type": "uint256",
+                    "indexed": false,
+                    "internalType": "uint256"
+                }
+            ],
+            "anonymous": false
+        },
+        {
+            "type": "event",
+            "name": "DKGRound1Submitted",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "indexed": false,
+                    "internalType": "string"
+                },
+                {
+                    "name": "authorityIndex",
+                    "type": "uint256",
+                    "indexed": false,
+                    "internalType": "uint256"
+                }
+            ],
+            "anonymous": false
+        },
+        {
+            "type": "event",
+            "name": "DKGRound2Submitted",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "indexed": false,
+                    "internalType": "string"
+                },
+                {
+                    "name": "authorityIndex",
+                    "type": "uint256",
+                    "indexed": false,
+                    "internalType": "uint256"
+                }
+            ],
+            "anonymous": false
+        },
+        {
+            "type": "event",
+            "name": "ElectionCreated",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "indexed": false,
+                    "internalType": "string"
+                },
+                {
+                    "name": "electionName",
+                    "type": "string",
+                    "indexed": false,
+                    "internalType": "string"
+                },
+                {
+                    "name": "creatorName",
+                    "type": "string",
+                    "indexed": false,
+                    "internalType": "string"
+                }
+            ],
+            "anonymous": false
+        },
+        {
+            "type": "event",
+            "name": "ElectionPublicKeySet",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "indexed": false,
+                    "internalType": "string"
+                }
+            ],
+            "anonymous": false
+        },
+        {
+            "type": "event",
+            "name": "ElectionSetupCompleted",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "indexed": false,
+                    "internalType": "string"
+                }
+            ],
+            "anonymous": false
+        },
+        {
+            "type": "event",
+            "name": "EncryptedTallyPublished",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "indexed": false,
+                    "internalType": "string"
+                }
+            ],
+            "anonymous": false
+        },
+        {
+            "type": "event",
+            "name": "FinalResultPublished",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "indexed": false,
+                    "internalType": "string"
+                }
+            ],
+            "anonymous": false
+        },
+        {
+            "type": "event",
+            "name": "PartialDecryptionSubmitted",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "indexed": false,
+                    "internalType": "string"
+                },
+                {
+                    "name": "authorityIndex",
+                    "type": "uint256",
+                    "indexed": false,
+                    "internalType": "uint256"
+                }
+            ],
+            "anonymous": false
+        },
+        {
+            "type": "event",
+            "name": "Round1Activated",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "indexed": false,
+                    "internalType": "string"
+                }
+            ],
+            "anonymous": false
+        },
+        {
+            "type": "event",
+            "name": "VoteSubmitted",
+            "inputs": [
+                {
+                    "name": "electionId",
+                    "type": "string",
+                    "indexed": false,
+                    "internalType": "string"
+                },
+                {
+                    "name": "nullifier",
+                    "type": "string",
+                    "indexed": false,
+                    "internalType": "string"
+                }
+            ],
+            "anonymous": false
+        }
+    ],
+    "bytecode": {
+        "object": "0x6080806040523461001657612ea9908161001c8239f35b600080fdfe6080604052600436101561001257600080fd5b60003560e01c80630b8d59cf146126725780630e55e3a11461260c5780630ec8e14c1461250e578063119cd0a41461243357806315143d5814612381578063162485111461234d5780631985ee8a14611d1857806326a263fd14611a4757806339c9a34c146118bd5780633cd6d30a1461159857806343709a01146115715780634a3ccc96146113ac5780634ac7ac681461133a57806356704169146111bc5780635bc8c465146110da5780635fb8460c1461103a578063928cb52e14610c785780639509bebe14610a985780639e77866914610877578063a1e520f2146106a9578063a9ec02ce14610565578063cde4914314610530578063d8fbfc4714610429578063e5a993bc146103d4578063e638faeb1461030e578063eaceead3146101ce578063eeaba3151461019a5763f22a34021461015057600080fd5b3461019557602061018c8161017c61016736612aeb565b929081604051938285809451938492016127c7565b81016008815203019020906127ea565b54604051908152f35b600080fd5b346101955760206101ad61016736612a40565b81016002815203019020906000526020526020604060002054604051908152f35b34610195576060366003190112610195576004356001600160401b038111610195576101fe903690600401612951565b90604051918082843782818101600281526020948591030190206024356000528352604060002054926004610246856040518587823784818781016001815203019020612b2e565b50019360ff855460101c166102c9577f3d5b0d2ee6eceac0a0c21657fe9df0d2aa4993649155cfd9d99fe94ef0f0df019460405184868237838186810160078152030190208260005283526044356040600020556201000062ff0000198254161790556102c0604051948594604086526040860191612cd4565b918301520390a1005b60405162461bcd60e51b815260048101839052601c60248201527f44656372797074696f6e20616c7265616479207375626d6974746564000000006044820152606490fd5b3461019557602061032161016736612a40565b810160018152030190209081548110156101955761033e91612b2e565b50805461034d60018301612878565b9160ff6103ad61035f60028401612878565b9261039f600461037160038401612878565b92015494610391604051988998895260e060208a015260e089019061292c565b90878203604089015261292c565b90858203606087015261292c565b9181811615156080850152818160081c16151560a085015260101c16151560c08301520390f35b346101955760206103e761016736612a40565b810160068152030190209081548110156101955761040b6104119161042593612810565b9061291e565b60405191829160208352602083019061292c565b0390f35b34610195576080366003190112610195576001600160401b036004358181116101955761045a903690600401612951565b6024359260443590811161019557610476903690600401612951565b909360405183858237602081858101600081520301902090600f8201926104a460ff855460081c1615612d36565b8160088401556001820180921161051a577fb655f203d661304de8a1a49a33d5e238329630afd7a2d0f8c72c22a8420b8a92966104e9926007850155600a8401612bbf565b600960643591015561010061ff0019825416179055610515604051928392602084526020840191612cd4565b0390a1005b634e487b7160e01b600052601160045260246000fd5b3461019557602060ff6105598261054961016736612aeb565b81016005815203019020906127ea565b54166040519015158152f35b34610195576060366003190112610195576001600160401b0360043581811161019557610596903690600401612951565b91602435908111610195576105af903690600401612951565b60ff6105d36040959395518486823760208186810160058152030190208387612b4a565b5416610673577f85d62c20b605c73f13ec5d41dc1af86f969090592554aaf95b60b58adf0f105f936105159161061e6040518587823760208187810160058152030190208284612b4a565b805460ff191660011790556040518486823761064d858201916004835260208160443594030190208385612b4a565b55610665604051958695604087526040870191612cd4565b918483036020860152612cd4565b60405162461bcd60e51b815260206004820152600e60248201526d139d5b1b1a599a595c881d5cd95960921b6044820152606490fd5b3461019557602080600319360112610195576004356001600160401b038111610195576106da903690600401612951565b6040519291819084378201918181600194858152030190208054916106fe83612d77565b9261070c6040519485612742565b8084528184018093600052826000206000915b8383106107f057505050506040519384938285019083865251809152604085019260408260051b87010194936000905b83821061075c5787870388f35b918496819592949698508190603f198b8203018552895190815181526107ba6107a76107958585015160e08786015260e085019061292c565b6040850151848203604086015261292c565b606080850151908483039085015261292c565b9160808082015115159083015260a08082015115159083015260c08091015115159101529801920192018796959391949261074f565b966005858297989699604051610805816126f0565b85548152610814858701612878565b8382015261082460028701612878565b604082015261083560038701612878565b6060820152600486015460ff9081811615156080840152818160081c16151560a084015260101c16151560c0820152815201920192019190969395949661071f565b34610195576040366003190112610195576001600160401b03600435818111610195576108a8903690600401612951565b9091602435818111610195576108c2903690600401612951565b60405192918486853760ff600f8587810160008152602097889103019020015460281c16610a5b57600b604051868882378581888101600081520301902001928211610a455761091c82610916855461283e565b85612b7a565b600090601f83116001146109b957918061051594927f85150ffc28a7113193ce8386ded2982d51f9296eded69bafe3d90155f3bcd38e98946000926109ae575b50508160011b916000199060031b1c19161790555b600f6040518583823784818781016000815203019020016501000000000065ff000000000019825416179055604051938385948552840191612cd4565b01359050888061095c565b601f1983169184600052856000209260005b818110610a2e57509260019285927f85150ffc28a7113193ce8386ded2982d51f9296eded69bafe3d90155f3bcd38e9a96610515989610610a14575b505050811b019055610971565b0135600019600384901b60f8161c19169055888080610a07565b9193876001819287870135815501950192016109cb565b634e487b7160e01b600052604160045260246000fd5b60405162461bcd60e51b81526004810185905260156024820152741112d1c8185b1c9958591e48199a5b985b1a5e9959605a1b6044820152606490fd5b3461019557610aa636612aa1565b9060405191838584378284810160068152602094859103019020600160401b8211610a45578054828255808310610c05575b5060009081528381209092805b838510610b22576040518681527ff835ad16641c6bbfb8383a44c52d36eded75b731bf0fe7b2bd3061753abfd82b9080610515818a018b8d612cd4565b610b2c8183612c8b565b6001600160401b038111610a45578791610b5082610b4a885461283e565b88612b7a565b600090601f8311600114610b9a57918060019592869594600092610b8f575b5050600019600383901b1c191690841b1786555b01930194019391610ae5565b013590508d80610b6f565b601f1983169187600052846000209260005b818110610bed5750916001969391858897969410610bd3575b505050831b83018655610b83565b0135600019600384901b60f8161c191690558c8080610bc5565b8284013585558c966001909501949283019201610bac565b81600052828560002091820191015b818110610c215750610ad8565b80610c2e6001925461283e565b80610c3b575b5001610c14565b601f908181118414610c54575050600081555b89610c34565b610c6f6000928484528a8420920160051c8201858301612b63565b81835555610c4e565b34610195576020366003190112610195576004356001600160401b03811161019557610caa6020913690600401612951565b91906000610280604051610cbd8161270b565b60608152606085820152606060408201526060808201528260808201528260a08201528260c08201528260e08201528261010082015282610120820152606061014082015260606101608201526060610180820152826101a0820152826101c0820152826101e08201528261020082015282610220820152826102408201528261026082015201528260405193849283378101600081520301902060405190610d658261270b565b610d6e81612878565b8252610d7c60018201612878565b6020830152610d8d60028201612878565b6040830152600381018054610da181612d77565b91610daf6040519384612742565b818352602083019060005260206000206000915b83831061101d578660ff600f8888606085015260048101546080850152600581015460a0850152600681015460c0850152600781015460e085015260088101546101008501526009810154610120850152610e20600a8201612878565b610140850152610e32600b8201612878565b610160850152610e44600c8201612878565b610180850152600d8101546101a0850152600e8101546101c0850152015481811615156101e0840152818160081c161515610200840152818160101c161515610220840152818160181c161515610240840152818160201c16151561026084015260281c161515610280820152604051809160208252610280610fb2610f9a610f82610f29610f13610efd610ee788516102a060208c01526102c08b019061292c565b60208901518a8203601f190160408c015261292c565b6040880151898203601f190160608b015261292c565b6060870151888203601f190160808a015261297e565b608086015160a088015260a086015160c088015260c086015160e088015260e0860151610100880152610100860151610120880152610120860151610140880152610140860151601f198883030161016089015261292c565b610160850151868203601f190161018088015261292c565b610180840151858203601f19016101a087015261292c565b916101a08101516101c08501526101c08101516101e08501526101e08101511515610200850152610200810151151561022085015261022081015115156102408501526102408101511515610260850152610260810151151582850152015115156102a08301520390f35b60016020819261102c85612878565b815201920192019190610dc3565b34610195576020366003190112610195576004356001600160401b0381116101955761108b7f16d7c9b4ffd8075a5ad2748dc134733d803a7a67d5da9cfdb46266df1a35f8e6913690600401612951565b600f60405182848237602081848101600081520301902001630100000081546110b960ff8260081c16612d36565b63ff0000001916179055610515604051928392602084526020840191612cd4565b34610195576020366003190112610195576004356001600160401b0381116101955761110a903690600401612951565b806040519283378101906020816001938481520301902080549061112d82612d8e565b9161113781612dc0565b9160005b82811061116c5761115e85610425866040519384936040855260408501906129da565b90838203602085015261297e565b8061117a6111b79284612b2e565b50546111868288612e0a565b5261119c876111958386612b2e565b5001612878565b6111a68287612e0a565b526111b18186612e0a565b50612c7c565b61113b565b34610195576060366003190112610195576001600160401b03600435818111610195576111ed903690600401612951565b90602492833581811161019557611208903690600401612951565b9093604435928311610195576112246020933690600401612a71565b939094826040519384928337810160008152030190209361124b60ff600f87015416612cf5565b600e8501544211156112ec579061126791600c86959601612bbf565b600360009201915b81811061127857005b611283818386612cbd565b8492919254600160401b8110156112d7578060016112a49201875586612810565b9190916112c2576112bd936112b892612bbf565b612c7c565b61126f565b87634e487b7160e01b60005260006004526000fd5b87634e487b7160e01b60005260416004526000fd5b60405162461bcd60e51b8152602060048201526021818801527f507265656c656374696f6e206461746120706572696f64206e6f7420656e64656044820152601960fa1b6064820152608490fd5b346101955761134836612a0e565b9190604051928183853783828101600281526020958691030190209060005283528260406000205492826040519384928337810160038152030190209060005281526113976040600020612e1e565b9061042560405192828493845283019061297e565b34610195576020366003190112610195576004356001600160401b038111610195576113dc9036906004016127a9565b60405181818093516020819301916113f3926127c7565b81016000815203602001902061140881612878565b61141460018301612878565b9061142160028401612878565b926004810154906005810154926006820154906007830154906008840154906009850154600a860161145290612878565b9261145f600b8801612878565b9461146c600c8901612878565b96600d8901549a600e8a015499600f01549a6040519e8f9e8f98610280808b528a016114979161292c565b89810360208b01526114a89161292c565b88810360408a01526114b99161292c565b966060015260808d015260a08c015260c08b015260e08a01526101008901528781036101208901526114ea9161292c565b8681036101408801526114fc9161292c565b85810361016087015261150e9161292c565b926101808501526101a084015260ff9081811615156101c0850152818160081c1615156101e0850152818160101c161515610200850152818160181c161515610220850152818160201c16151561024085015260281c1615156102608301520390f35b3461019557602061018c8161158861016736612aeb565b81016004815203019020906127ea565b34610195576060366003190112610195576004356001600160401b038111610195576115c8903690600401612951565b906044356001600160401b038111610195576115e8903690600401612a71565b6040939193518284823760208184810160028152030190206024356000526020526040600020549061162e82604051858782376020818781016001815203019020612b2e565b5090600482015460ff8116156118865760081c60ff1661184b57604051848682376020818681016003815203019020836000526020526040600020600160401b8211610a455780548282558083106117d5575b506000908152602081209096805b8389106116ec5760048501805461ff001916610100179055604080518181527fd705d1f1e60e75f3026e276b9d9bdc04d5a086fb18c4d7df997690b76d1997f391819089906116e19083018c8e612cd4565b9060208301520390a1005b6116f68183612c8b565b906001600160401b038211610a455761171982611713875461283e565b87612b7a565b600090601f831160011461176557928260019493602093869560009261175a575b5050600019600383901b1c191690841b1786555b0193019801979161168f565b013590508e8061173a565b8560005260206000209160005b601f19851681106117bd575083602093600196938796938794601f198116106117a3575b505050811b01865561174e565b0135600019600384901b60f8161c191690558e8080611796565b90926020600181928686013581550194019101611772565b816000526020600020908382015b81830181106117f3575050611681565b806118006001925461283e565b8061180d575b50016117e3565b601f908181118414611826575050600081555b8b611806565b61184260009284845260208420920160051c8201858301612b63565b81835555611820565b60405162461bcd60e51b8152602060048201526013602482015272526f756e643220616c726561647920646f6e6560681b6044820152606490fd5b60405162461bcd60e51b815260206004820152600f60248201526e526f756e6431206e6f7420646f6e6560881b6044820152606490fd5b34610195576118cb36612aa1565b929060405193838386378484810160008152602096879103019020916003830180548303611a105760005b83811061194657600f8501805462ff00001916620100001790556040518881527fb837ff5b747579aa4b779069e1b8cb1801e3cb794fc80e3855be69c2df37a75e9080610515818c018b8b612cd4565b6040518787823788818981016008815203019020906119658184612810565b509160405160009184546119788161283e565b956001918083169081156119f257506001146119b1575b50506119ac945082528a818460051b880135930301902055612c7c565b6118f6565b909194959293506000528b600020908c6000925b8484106119e15750505050906119ac9392918101918c8061198f565b8054868501529281019282016119c5565b60ff19168552506119ac9680151502840194508e915081905061198f565b60405162461bcd60e51b815260048101889052600f60248201526e098cadccee8d040dad2e6dac2e8c6d608b1b6044820152606490fd5b34610195576080366003190112610195576001600160401b0360043581811161019557611a78903690600401612951565b60443583811161019557611a90903690600401612951565b939060643582811161019557611aaa903690600401612951565b959091604051938587863784868101600281526020968791030190206024356000528552604060002054936040519287898537611af68689860195898160019889815203019020612b2e565b5090600482019560ff875416611cdd576002830191858211610a4557611b2082610916855461283e565b600090601f8311600114611c735760039493929160009183611c68575b505060001982861b1c191690871b1790555b01918911610a4557611b6b89611b65845461283e565b84612b7a565b600090601f8a11600114611be4577f4f92ab133231350d802530e6583736951461e5031543b99df6fb63d22088090a999160009183611bd9575b5050600019600383901b1c191690831b1790555b60ff198254161790556102c0604051948594604086526040860191612cd4565b013590508a80611ba5565b601f198a169183600052876000209260005b818110611c535750918593918c7f4f92ab133231350d802530e6583736951461e5031543b99df6fb63d22088090a9d9410611c39575b505050811b019055611bb9565b0135600019600384901b60f8161c191690558a8080611c2c565b83830135855593860193918901918901611bf6565b013590508e80611b3d565b918791949392601f19821690846000528c600020918d6000905b828210611cc6575050968360039810611cae575b505050811b019055611b4f565b013560001983881b60f8161c191690558e8080611ca1565b838a01358555988901988c9690940193018e611c8d565b60405162461bcd60e51b8152600481018a90526013602482015272526f756e643120616c726561647920646f6e6560681b6044820152606490fd5b3461019557610120366003190112610195576004356001600160401b03811161019557611d49903690600401612951565b906024356001600160401b03811161019557611d69903690600401612951565b92906044356001600160401b03811161019557611d8a903690600401612951565b919094610104356001600160401b03811161019557611dad903690600401612a71565b60ff600f604051888a82376020818a8101600081520301902001541661230857600f604051878982376020818981016000815203019020611def888a83612bbf565b611dfd858760018401612bbf565b611e0b878b60028401612bbf565b606435600d820155608435600e82015560a435600482015560c435600582015560e435600682015501805460ff1916600117905560005b818110611eaa5750505091611e9c7f1e566f725708ea4fbfbfaf7c73dbf8be71279aa6ef350ea0ae45c0d214060794969261051594611e8e60405198899860608a5260608a0191612cd4565b918783036020890152612cd4565b918483036040860152612cd4565b60028101811161051a5760405187898237602081898101600181520301902054611f09604051898b82376020818b81016001815203019020611eed848688612cbd565b929060405193611efc856126f0565b6002870185523691612763565b9060208301918252604051611f1d81612727565b600081526040840152604051611f3281612727565b60008152606084015260006080840152600060a0840152600060c08401528054600160401b811015610a4557611f6d91600182018155612b2e565b9190916122f25782518255518051906001600160401b038211610a45578190611fa682611f9d600187015461283e565b60018701612b7a565b602090601f831160011461228057600092612275575b50508160011b916000199060031b1c19161760018201555b60408201518051906001600160401b038211610a4557819061200682611ffd600287015461283e565b60028701612b7a565b602090601f8311600114612203576000926121f8575b50508160011b916000199060031b1c19161760028201555b60608201518051906001600160401b038211610a45576120648261205b600386015461283e565b60038601612b7a565b602090601f831160011461215e5792827fc0cc97230d4b31165b87c99dda5f9aebe1a770ec45c8c6fbf30c406d47b5809e959360049361214e999896600092612153575b50508160011b916000199060031b1c19161760038201555b01906080810151151590825460ff62ff000060c061ff0060a0860151151560081b16940151151560101b1693169062ffffff191617171790556040518a8c82376020818c8101600281520301902060028401600052602052806040600020556040518091606082526121378d8d6060850191612cd4565b9060028601602084015260408301520390a1612c7c565b611e42565b0151905038806120a8565b906003840160005260206000209160005b601f19851681106121e057508360049361214e999896936001937fc0cc97230d4b31165b87c99dda5f9aebe1a770ec45c8c6fbf30c406d47b5809e9997601f198116106121c7575b505050811b0160038201556120c0565b015160001960f88460031b161c191690553880806121b7565b9192602060018192868501518155019401920161216f565b015190508e8061201c565b9250600284016000526020600020906000935b601f198416851061225a576001945083601f19811610612241575b505050811b016002820155612034565b015160001960f88460031b161c191690558e8080612231565b81810151835560209485019460019093019290910190612216565b015190508e80611fbc565b9250600184016000526020600020906000935b601f19841685106122d7576001945083601f198116106122be575b505050811b016001820155611fd4565b015160001960f88460031b161c191690558e80806122ae565b81810151835560209485019460019093019290910190612293565b634e487b7160e01b600052600060045260246000fd5b60405162461bcd60e51b815260206004820152601760248201527f456c656374696f6e20616c7265616479206578697374730000000000000000006044820152606490fd5b3461019557602061236061016736612a40565b81016007815203019020906000526020526020604060002054604051908152f35b34610195576020366003190112610195576004356001600160401b0381116101955760206123b5600f923690600401612951565b9190826040519384928337810160008152030190200180546123d960ff8216612cf5565b60ff8160181c16156123f85764ff000000001916640100000000179055005b60405162461bcd60e51b8152602060048201526013602482015272526f756e6431207374696c6c2061637469766560681b6044820152606490fd5b34610195576124df61042561244736612a0e565b9092916040519184828437828581016002815260209485910301902090600052825260406000205461248c816040518785823785818981016001815203019020612b2e565b5094836004870154938260405193849283378101600381520301902090600052825260ff6124ca6124c4600260406000209701612878565b95612e1e565b9160405196879660a0885260a088019061292c565b93828216151590870152818160081c161515604087015260101c1615156060850152838203608085015261297e565b3461019557602080600319360112610195576004356001600160401b0381116101955761253f903690600401612951565b60036040518284823784818481016000815203019020019081549061256382612dc0565b9361256d83612d8e565b9360005b8481106125a257612595876104258a8960405194859460408652604086019061297e565b91848303908501526129da565b806125b96125b36126079385612810565b50612878565b6125c3828a612e0a565b526125ce8189612e0a565b506125f6604051868682378a8188810160088152030190206125f0838b612e0a565b516127ea565b546126018289612e0a565b52612c7c565b612571565b34610195576020366003190112610195576004356001600160401b0381116101955761265e6020612644610425933690600401612951565b919082604051938492833781016006815203019020612e1e565b60405191829160208352602083019061297e565b34610195576060366003190112610195576004356001600160401b038111610195576126a29036906004016127a9565b6126be60206044359281604051938285809451938492016127c7565b8101600381520301902060243560005260205260406000209081548110156101955761040b6104119161042593612810565b60e081019081106001600160401b03821117610a4557604052565b6102a081019081106001600160401b03821117610a4557604052565b602081019081106001600160401b03821117610a4557604052565b90601f801991011681019081106001600160401b03821117610a4557604052565b9291926001600160401b038211610a45576040519161278c601f8201601f191660200184612742565b829481845281830111610195578281602093846000960137010152565b9080601f83011215610195578160206127c493359101612763565b90565b60005b8381106127da5750506000910152565b81810151838201526020016127ca565b6020906128049282604051948386809551938492016127c7565b82019081520301902090565b80548210156128285760005260206000200190600090565b634e487b7160e01b600052603260045260246000fd5b90600182811c9216801561286e575b602083101461285857565b634e487b7160e01b600052602260045260246000fd5b91607f169161284d565b906040519182600082549261288c8461283e565b9081845260019485811690816000146128fb57506001146128b8575b50506128b692500383612742565b565b9093915060005260209081600020936000915b8183106128e35750506128b6935082010138806128a8565b855488840185015294850194879450918301916128cb565b9150506128b694506020925060ff191682840152151560051b82010138806128a8565b906122f2576127c490612878565b90602091612945815180928185528580860191016127c7565b601f01601f1916010190565b9181601f84011215610195578235916001600160401b038311610195576020838186019501011161019557565b908082519081815260208091019281808460051b8301019501936000915b8483106129ac5750505050505090565b90919293949584806129ca600193601f198682030187528a5161292c565b980193019301919493929061299c565b90815180825260208080930193019160005b8281106129fa575050505090565b8351855293810193928101926001016129ec565b604060031982011261019557600435906001600160401b03821161019557612a3891600401612951565b909160243590565b604060031982011261019557600435906001600160401b03821161019557612a6a916004016127a9565b9060243590565b9181601f84011215610195578235916001600160401b038311610195576020808501948460051b01011161019557565b6040600319820112610195576001600160401b03916004358381116101955782612acd91600401612951565b9390939260243591821161019557612ae791600401612a71565b9091565b906040600319830112610195576001600160401b036004358181116101955783612b17916004016127a9565b92602435918211610195576127c4916004016127a9565b8054821015612828576000526005602060002091020190600090565b6020919283604051948593843782019081520301902090565b818110612b6e575050565b60008155600101612b63565b9190601f8111612b8957505050565b6128b6926000526020600020906020601f840160051c83019310612bb5575b601f0160051c0190612b63565b9091508190612ba8565b9092916001600160401b038111610a4557612bde81611b65845461283e565b6000601f8211600114612c185781929394600092612c0d575b50508160011b916000199060031b1c1916179055565b013590503880612bf7565b601f198216948382526020918281209281905b888210612c6457505083600195969710612c4a575b505050811b019055565b0135600019600384901b60f8161c19169055388080612c40565b80600184968294958701358155019501920190612c2b565b600019811461051a5760010190565b903590601e198136030182121561019557018035906001600160401b0382116101955760200191813603831361019557565b9082101561282857612ae79160051b810190612c8b565b908060209392818452848401376000828201840152601f01601f1916010190565b15612cfc57565b60405162461bcd60e51b8152602060048201526012602482015271115b1958dd1a5bdb881b9bdd08199bdd5b9960721b6044820152606490fd5b15612d3d57565b60405162461bcd60e51b81526020600482015260126024820152710456c656374696f6e206e6f742073657475760741b6044820152606490fd5b6001600160401b038111610a455760051b60200190565b90612d9882612d77565b612da56040519182612742565b8281528092612db6601f1991612d77565b0190602036910137565b90612dca82612d77565b612dd76040519182612742565b8281528092612de8601f1991612d77565b019060005b828110612df957505050565b806060602080938501015201612ded565b80518210156128285760209160051b010190565b908154612e2a81612d77565b92612e386040519485612742565b818452600090815260208082208186015b848410612e57575050505050565b6001838192612e6585612878565b815201920193019290612e4956fea2646970667358221220fc9df315a56bdcbd3eb277521544807c791a5a9a790e43632e57e7dbb70fc34a64736f6c63430008130033",
+        "sourceMap": "104:11151:16:-:0;;;;;;;;;;;;;;;;;",
+        "linkReferences": {}
+    },
+    "deployedBytecode": {
+        "object": "0x6080604052600436101561001257600080fd5b60003560e01c80630b8d59cf146126725780630e55e3a11461260c5780630ec8e14c1461250e578063119cd0a41461243357806315143d5814612381578063162485111461234d5780631985ee8a14611d1857806326a263fd14611a4757806339c9a34c146118bd5780633cd6d30a1461159857806343709a01146115715780634a3ccc96146113ac5780634ac7ac681461133a57806356704169146111bc5780635bc8c465146110da5780635fb8460c1461103a578063928cb52e14610c785780639509bebe14610a985780639e77866914610877578063a1e520f2146106a9578063a9ec02ce14610565578063cde4914314610530578063d8fbfc4714610429578063e5a993bc146103d4578063e638faeb1461030e578063eaceead3146101ce578063eeaba3151461019a5763f22a34021461015057600080fd5b3461019557602061018c8161017c61016736612aeb565b929081604051938285809451938492016127c7565b81016008815203019020906127ea565b54604051908152f35b600080fd5b346101955760206101ad61016736612a40565b81016002815203019020906000526020526020604060002054604051908152f35b34610195576060366003190112610195576004356001600160401b038111610195576101fe903690600401612951565b90604051918082843782818101600281526020948591030190206024356000528352604060002054926004610246856040518587823784818781016001815203019020612b2e565b50019360ff855460101c166102c9577f3d5b0d2ee6eceac0a0c21657fe9df0d2aa4993649155cfd9d99fe94ef0f0df019460405184868237838186810160078152030190208260005283526044356040600020556201000062ff0000198254161790556102c0604051948594604086526040860191612cd4565b918301520390a1005b60405162461bcd60e51b815260048101839052601c60248201527f44656372797074696f6e20616c7265616479207375626d6974746564000000006044820152606490fd5b3461019557602061032161016736612a40565b810160018152030190209081548110156101955761033e91612b2e565b50805461034d60018301612878565b9160ff6103ad61035f60028401612878565b9261039f600461037160038401612878565b92015494610391604051988998895260e060208a015260e089019061292c565b90878203604089015261292c565b90858203606087015261292c565b9181811615156080850152818160081c16151560a085015260101c16151560c08301520390f35b346101955760206103e761016736612a40565b810160068152030190209081548110156101955761040b6104119161042593612810565b9061291e565b60405191829160208352602083019061292c565b0390f35b34610195576080366003190112610195576001600160401b036004358181116101955761045a903690600401612951565b6024359260443590811161019557610476903690600401612951565b909360405183858237602081858101600081520301902090600f8201926104a460ff855460081c1615612d36565b8160088401556001820180921161051a577fb655f203d661304de8a1a49a33d5e238329630afd7a2d0f8c72c22a8420b8a92966104e9926007850155600a8401612bbf565b600960643591015561010061ff0019825416179055610515604051928392602084526020840191612cd4565b0390a1005b634e487b7160e01b600052601160045260246000fd5b3461019557602060ff6105598261054961016736612aeb565b81016005815203019020906127ea565b54166040519015158152f35b34610195576060366003190112610195576001600160401b0360043581811161019557610596903690600401612951565b91602435908111610195576105af903690600401612951565b60ff6105d36040959395518486823760208186810160058152030190208387612b4a565b5416610673577f85d62c20b605c73f13ec5d41dc1af86f969090592554aaf95b60b58adf0f105f936105159161061e6040518587823760208187810160058152030190208284612b4a565b805460ff191660011790556040518486823761064d858201916004835260208160443594030190208385612b4a565b55610665604051958695604087526040870191612cd4565b918483036020860152612cd4565b60405162461bcd60e51b815260206004820152600e60248201526d139d5b1b1a599a595c881d5cd95960921b6044820152606490fd5b3461019557602080600319360112610195576004356001600160401b038111610195576106da903690600401612951565b6040519291819084378201918181600194858152030190208054916106fe83612d77565b9261070c6040519485612742565b8084528184018093600052826000206000915b8383106107f057505050506040519384938285019083865251809152604085019260408260051b87010194936000905b83821061075c5787870388f35b918496819592949698508190603f198b8203018552895190815181526107ba6107a76107958585015160e08786015260e085019061292c565b6040850151848203604086015261292c565b606080850151908483039085015261292c565b9160808082015115159083015260a08082015115159083015260c08091015115159101529801920192018796959391949261074f565b966005858297989699604051610805816126f0565b85548152610814858701612878565b8382015261082460028701612878565b604082015261083560038701612878565b6060820152600486015460ff9081811615156080840152818160081c16151560a084015260101c16151560c0820152815201920192019190969395949661071f565b34610195576040366003190112610195576001600160401b03600435818111610195576108a8903690600401612951565b9091602435818111610195576108c2903690600401612951565b60405192918486853760ff600f8587810160008152602097889103019020015460281c16610a5b57600b604051868882378581888101600081520301902001928211610a455761091c82610916855461283e565b85612b7a565b600090601f83116001146109b957918061051594927f85150ffc28a7113193ce8386ded2982d51f9296eded69bafe3d90155f3bcd38e98946000926109ae575b50508160011b916000199060031b1c19161790555b600f6040518583823784818781016000815203019020016501000000000065ff000000000019825416179055604051938385948552840191612cd4565b01359050888061095c565b601f1983169184600052856000209260005b818110610a2e57509260019285927f85150ffc28a7113193ce8386ded2982d51f9296eded69bafe3d90155f3bcd38e9a96610515989610610a14575b505050811b019055610971565b0135600019600384901b60f8161c19169055888080610a07565b9193876001819287870135815501950192016109cb565b634e487b7160e01b600052604160045260246000fd5b60405162461bcd60e51b81526004810185905260156024820152741112d1c8185b1c9958591e48199a5b985b1a5e9959605a1b6044820152606490fd5b3461019557610aa636612aa1565b9060405191838584378284810160068152602094859103019020600160401b8211610a45578054828255808310610c05575b5060009081528381209092805b838510610b22576040518681527ff835ad16641c6bbfb8383a44c52d36eded75b731bf0fe7b2bd3061753abfd82b9080610515818a018b8d612cd4565b610b2c8183612c8b565b6001600160401b038111610a45578791610b5082610b4a885461283e565b88612b7a565b600090601f8311600114610b9a57918060019592869594600092610b8f575b5050600019600383901b1c191690841b1786555b01930194019391610ae5565b013590508d80610b6f565b601f1983169187600052846000209260005b818110610bed5750916001969391858897969410610bd3575b505050831b83018655610b83565b0135600019600384901b60f8161c191690558c8080610bc5565b8284013585558c966001909501949283019201610bac565b81600052828560002091820191015b818110610c215750610ad8565b80610c2e6001925461283e565b80610c3b575b5001610c14565b601f908181118414610c54575050600081555b89610c34565b610c6f6000928484528a8420920160051c8201858301612b63565b81835555610c4e565b34610195576020366003190112610195576004356001600160401b03811161019557610caa6020913690600401612951565b91906000610280604051610cbd8161270b565b60608152606085820152606060408201526060808201528260808201528260a08201528260c08201528260e08201528261010082015282610120820152606061014082015260606101608201526060610180820152826101a0820152826101c0820152826101e08201528261020082015282610220820152826102408201528261026082015201528260405193849283378101600081520301902060405190610d658261270b565b610d6e81612878565b8252610d7c60018201612878565b6020830152610d8d60028201612878565b6040830152600381018054610da181612d77565b91610daf6040519384612742565b818352602083019060005260206000206000915b83831061101d578660ff600f8888606085015260048101546080850152600581015460a0850152600681015460c0850152600781015460e085015260088101546101008501526009810154610120850152610e20600a8201612878565b610140850152610e32600b8201612878565b610160850152610e44600c8201612878565b610180850152600d8101546101a0850152600e8101546101c0850152015481811615156101e0840152818160081c161515610200840152818160101c161515610220840152818160181c161515610240840152818160201c16151561026084015260281c161515610280820152604051809160208252610280610fb2610f9a610f82610f29610f13610efd610ee788516102a060208c01526102c08b019061292c565b60208901518a8203601f190160408c015261292c565b6040880151898203601f190160608b015261292c565b6060870151888203601f190160808a015261297e565b608086015160a088015260a086015160c088015260c086015160e088015260e0860151610100880152610100860151610120880152610120860151610140880152610140860151601f198883030161016089015261292c565b610160850151868203601f190161018088015261292c565b610180840151858203601f19016101a087015261292c565b916101a08101516101c08501526101c08101516101e08501526101e08101511515610200850152610200810151151561022085015261022081015115156102408501526102408101511515610260850152610260810151151582850152015115156102a08301520390f35b60016020819261102c85612878565b815201920192019190610dc3565b34610195576020366003190112610195576004356001600160401b0381116101955761108b7f16d7c9b4ffd8075a5ad2748dc134733d803a7a67d5da9cfdb46266df1a35f8e6913690600401612951565b600f60405182848237602081848101600081520301902001630100000081546110b960ff8260081c16612d36565b63ff0000001916179055610515604051928392602084526020840191612cd4565b34610195576020366003190112610195576004356001600160401b0381116101955761110a903690600401612951565b806040519283378101906020816001938481520301902080549061112d82612d8e565b9161113781612dc0565b9160005b82811061116c5761115e85610425866040519384936040855260408501906129da565b90838203602085015261297e565b8061117a6111b79284612b2e565b50546111868288612e0a565b5261119c876111958386612b2e565b5001612878565b6111a68287612e0a565b526111b18186612e0a565b50612c7c565b61113b565b34610195576060366003190112610195576001600160401b03600435818111610195576111ed903690600401612951565b90602492833581811161019557611208903690600401612951565b9093604435928311610195576112246020933690600401612a71565b939094826040519384928337810160008152030190209361124b60ff600f87015416612cf5565b600e8501544211156112ec579061126791600c86959601612bbf565b600360009201915b81811061127857005b611283818386612cbd565b8492919254600160401b8110156112d7578060016112a49201875586612810565b9190916112c2576112bd936112b892612bbf565b612c7c565b61126f565b87634e487b7160e01b60005260006004526000fd5b87634e487b7160e01b60005260416004526000fd5b60405162461bcd60e51b8152602060048201526021818801527f507265656c656374696f6e206461746120706572696f64206e6f7420656e64656044820152601960fa1b6064820152608490fd5b346101955761134836612a0e565b9190604051928183853783828101600281526020958691030190209060005283528260406000205492826040519384928337810160038152030190209060005281526113976040600020612e1e565b9061042560405192828493845283019061297e565b34610195576020366003190112610195576004356001600160401b038111610195576113dc9036906004016127a9565b60405181818093516020819301916113f3926127c7565b81016000815203602001902061140881612878565b61141460018301612878565b9061142160028401612878565b926004810154906005810154926006820154906007830154906008840154906009850154600a860161145290612878565b9261145f600b8801612878565b9461146c600c8901612878565b96600d8901549a600e8a015499600f01549a6040519e8f9e8f98610280808b528a016114979161292c565b89810360208b01526114a89161292c565b88810360408a01526114b99161292c565b966060015260808d015260a08c015260c08b015260e08a01526101008901528781036101208901526114ea9161292c565b8681036101408801526114fc9161292c565b85810361016087015261150e9161292c565b926101808501526101a084015260ff9081811615156101c0850152818160081c1615156101e0850152818160101c161515610200850152818160181c161515610220850152818160201c16151561024085015260281c1615156102608301520390f35b3461019557602061018c8161158861016736612aeb565b81016004815203019020906127ea565b34610195576060366003190112610195576004356001600160401b038111610195576115c8903690600401612951565b906044356001600160401b038111610195576115e8903690600401612a71565b6040939193518284823760208184810160028152030190206024356000526020526040600020549061162e82604051858782376020818781016001815203019020612b2e565b5090600482015460ff8116156118865760081c60ff1661184b57604051848682376020818681016003815203019020836000526020526040600020600160401b8211610a455780548282558083106117d5575b506000908152602081209096805b8389106116ec5760048501805461ff001916610100179055604080518181527fd705d1f1e60e75f3026e276b9d9bdc04d5a086fb18c4d7df997690b76d1997f391819089906116e19083018c8e612cd4565b9060208301520390a1005b6116f68183612c8b565b906001600160401b038211610a455761171982611713875461283e565b87612b7a565b600090601f831160011461176557928260019493602093869560009261175a575b5050600019600383901b1c191690841b1786555b0193019801979161168f565b013590508e8061173a565b8560005260206000209160005b601f19851681106117bd575083602093600196938796938794601f198116106117a3575b505050811b01865561174e565b0135600019600384901b60f8161c191690558e8080611796565b90926020600181928686013581550194019101611772565b816000526020600020908382015b81830181106117f3575050611681565b806118006001925461283e565b8061180d575b50016117e3565b601f908181118414611826575050600081555b8b611806565b61184260009284845260208420920160051c8201858301612b63565b81835555611820565b60405162461bcd60e51b8152602060048201526013602482015272526f756e643220616c726561647920646f6e6560681b6044820152606490fd5b60405162461bcd60e51b815260206004820152600f60248201526e526f756e6431206e6f7420646f6e6560881b6044820152606490fd5b34610195576118cb36612aa1565b929060405193838386378484810160008152602096879103019020916003830180548303611a105760005b83811061194657600f8501805462ff00001916620100001790556040518881527fb837ff5b747579aa4b779069e1b8cb1801e3cb794fc80e3855be69c2df37a75e9080610515818c018b8b612cd4565b6040518787823788818981016008815203019020906119658184612810565b509160405160009184546119788161283e565b956001918083169081156119f257506001146119b1575b50506119ac945082528a818460051b880135930301902055612c7c565b6118f6565b909194959293506000528b600020908c6000925b8484106119e15750505050906119ac9392918101918c8061198f565b8054868501529281019282016119c5565b60ff19168552506119ac9680151502840194508e915081905061198f565b60405162461bcd60e51b815260048101889052600f60248201526e098cadccee8d040dad2e6dac2e8c6d608b1b6044820152606490fd5b34610195576080366003190112610195576001600160401b0360043581811161019557611a78903690600401612951565b60443583811161019557611a90903690600401612951565b939060643582811161019557611aaa903690600401612951565b959091604051938587863784868101600281526020968791030190206024356000528552604060002054936040519287898537611af68689860195898160019889815203019020612b2e565b5090600482019560ff875416611cdd576002830191858211610a4557611b2082610916855461283e565b600090601f8311600114611c735760039493929160009183611c68575b505060001982861b1c191690871b1790555b01918911610a4557611b6b89611b65845461283e565b84612b7a565b600090601f8a11600114611be4577f4f92ab133231350d802530e6583736951461e5031543b99df6fb63d22088090a999160009183611bd9575b5050600019600383901b1c191690831b1790555b60ff198254161790556102c0604051948594604086526040860191612cd4565b013590508a80611ba5565b601f198a169183600052876000209260005b818110611c535750918593918c7f4f92ab133231350d802530e6583736951461e5031543b99df6fb63d22088090a9d9410611c39575b505050811b019055611bb9565b0135600019600384901b60f8161c191690558a8080611c2c565b83830135855593860193918901918901611bf6565b013590508e80611b3d565b918791949392601f19821690846000528c600020918d6000905b828210611cc6575050968360039810611cae575b505050811b019055611b4f565b013560001983881b60f8161c191690558e8080611ca1565b838a01358555988901988c9690940193018e611c8d565b60405162461bcd60e51b8152600481018a90526013602482015272526f756e643120616c726561647920646f6e6560681b6044820152606490fd5b3461019557610120366003190112610195576004356001600160401b03811161019557611d49903690600401612951565b906024356001600160401b03811161019557611d69903690600401612951565b92906044356001600160401b03811161019557611d8a903690600401612951565b919094610104356001600160401b03811161019557611dad903690600401612a71565b60ff600f604051888a82376020818a8101600081520301902001541661230857600f604051878982376020818981016000815203019020611def888a83612bbf565b611dfd858760018401612bbf565b611e0b878b60028401612bbf565b606435600d820155608435600e82015560a435600482015560c435600582015560e435600682015501805460ff1916600117905560005b818110611eaa5750505091611e9c7f1e566f725708ea4fbfbfaf7c73dbf8be71279aa6ef350ea0ae45c0d214060794969261051594611e8e60405198899860608a5260608a0191612cd4565b918783036020890152612cd4565b918483036040860152612cd4565b60028101811161051a5760405187898237602081898101600181520301902054611f09604051898b82376020818b81016001815203019020611eed848688612cbd565b929060405193611efc856126f0565b6002870185523691612763565b9060208301918252604051611f1d81612727565b600081526040840152604051611f3281612727565b60008152606084015260006080840152600060a0840152600060c08401528054600160401b811015610a4557611f6d91600182018155612b2e565b9190916122f25782518255518051906001600160401b038211610a45578190611fa682611f9d600187015461283e565b60018701612b7a565b602090601f831160011461228057600092612275575b50508160011b916000199060031b1c19161760018201555b60408201518051906001600160401b038211610a4557819061200682611ffd600287015461283e565b60028701612b7a565b602090601f8311600114612203576000926121f8575b50508160011b916000199060031b1c19161760028201555b60608201518051906001600160401b038211610a45576120648261205b600386015461283e565b60038601612b7a565b602090601f831160011461215e5792827fc0cc97230d4b31165b87c99dda5f9aebe1a770ec45c8c6fbf30c406d47b5809e959360049361214e999896600092612153575b50508160011b916000199060031b1c19161760038201555b01906080810151151590825460ff62ff000060c061ff0060a0860151151560081b16940151151560101b1693169062ffffff191617171790556040518a8c82376020818c8101600281520301902060028401600052602052806040600020556040518091606082526121378d8d6060850191612cd4565b9060028601602084015260408301520390a1612c7c565b611e42565b0151905038806120a8565b906003840160005260206000209160005b601f19851681106121e057508360049361214e999896936001937fc0cc97230d4b31165b87c99dda5f9aebe1a770ec45c8c6fbf30c406d47b5809e9997601f198116106121c7575b505050811b0160038201556120c0565b015160001960f88460031b161c191690553880806121b7565b9192602060018192868501518155019401920161216f565b015190508e8061201c565b9250600284016000526020600020906000935b601f198416851061225a576001945083601f19811610612241575b505050811b016002820155612034565b015160001960f88460031b161c191690558e8080612231565b81810151835560209485019460019093019290910190612216565b015190508e80611fbc565b9250600184016000526020600020906000935b601f19841685106122d7576001945083601f198116106122be575b505050811b016001820155611fd4565b015160001960f88460031b161c191690558e80806122ae565b81810151835560209485019460019093019290910190612293565b634e487b7160e01b600052600060045260246000fd5b60405162461bcd60e51b815260206004820152601760248201527f456c656374696f6e20616c7265616479206578697374730000000000000000006044820152606490fd5b3461019557602061236061016736612a40565b81016007815203019020906000526020526020604060002054604051908152f35b34610195576020366003190112610195576004356001600160401b0381116101955760206123b5600f923690600401612951565b9190826040519384928337810160008152030190200180546123d960ff8216612cf5565b60ff8160181c16156123f85764ff000000001916640100000000179055005b60405162461bcd60e51b8152602060048201526013602482015272526f756e6431207374696c6c2061637469766560681b6044820152606490fd5b34610195576124df61042561244736612a0e565b9092916040519184828437828581016002815260209485910301902090600052825260406000205461248c816040518785823785818981016001815203019020612b2e565b5094836004870154938260405193849283378101600381520301902090600052825260ff6124ca6124c4600260406000209701612878565b95612e1e565b9160405196879660a0885260a088019061292c565b93828216151590870152818160081c161515604087015260101c1615156060850152838203608085015261297e565b3461019557602080600319360112610195576004356001600160401b0381116101955761253f903690600401612951565b60036040518284823784818481016000815203019020019081549061256382612dc0565b9361256d83612d8e565b9360005b8481106125a257612595876104258a8960405194859460408652604086019061297e565b91848303908501526129da565b806125b96125b36126079385612810565b50612878565b6125c3828a612e0a565b526125ce8189612e0a565b506125f6604051868682378a8188810160088152030190206125f0838b612e0a565b516127ea565b546126018289612e0a565b52612c7c565b612571565b34610195576020366003190112610195576004356001600160401b0381116101955761265e6020612644610425933690600401612951565b919082604051938492833781016006815203019020612e1e565b60405191829160208352602083019061297e565b34610195576060366003190112610195576004356001600160401b038111610195576126a29036906004016127a9565b6126be60206044359281604051938285809451938492016127c7565b8101600381520301902060243560005260205260406000209081548110156101955761040b6104119161042593612810565b60e081019081106001600160401b03821117610a4557604052565b6102a081019081106001600160401b03821117610a4557604052565b602081019081106001600160401b03821117610a4557604052565b90601f801991011681019081106001600160401b03821117610a4557604052565b9291926001600160401b038211610a45576040519161278c601f8201601f191660200184612742565b829481845281830111610195578281602093846000960137010152565b9080601f83011215610195578160206127c493359101612763565b90565b60005b8381106127da5750506000910152565b81810151838201526020016127ca565b6020906128049282604051948386809551938492016127c7565b82019081520301902090565b80548210156128285760005260206000200190600090565b634e487b7160e01b600052603260045260246000fd5b90600182811c9216801561286e575b602083101461285857565b634e487b7160e01b600052602260045260246000fd5b91607f169161284d565b906040519182600082549261288c8461283e565b9081845260019485811690816000146128fb57506001146128b8575b50506128b692500383612742565b565b9093915060005260209081600020936000915b8183106128e35750506128b6935082010138806128a8565b855488840185015294850194879450918301916128cb565b9150506128b694506020925060ff191682840152151560051b82010138806128a8565b906122f2576127c490612878565b90602091612945815180928185528580860191016127c7565b601f01601f1916010190565b9181601f84011215610195578235916001600160401b038311610195576020838186019501011161019557565b908082519081815260208091019281808460051b8301019501936000915b8483106129ac5750505050505090565b90919293949584806129ca600193601f198682030187528a5161292c565b980193019301919493929061299c565b90815180825260208080930193019160005b8281106129fa575050505090565b8351855293810193928101926001016129ec565b604060031982011261019557600435906001600160401b03821161019557612a3891600401612951565b909160243590565b604060031982011261019557600435906001600160401b03821161019557612a6a916004016127a9565b9060243590565b9181601f84011215610195578235916001600160401b038311610195576020808501948460051b01011161019557565b6040600319820112610195576001600160401b03916004358381116101955782612acd91600401612951565b9390939260243591821161019557612ae791600401612a71565b9091565b906040600319830112610195576001600160401b036004358181116101955783612b17916004016127a9565b92602435918211610195576127c4916004016127a9565b8054821015612828576000526005602060002091020190600090565b6020919283604051948593843782019081520301902090565b818110612b6e575050565b60008155600101612b63565b9190601f8111612b8957505050565b6128b6926000526020600020906020601f840160051c83019310612bb5575b601f0160051c0190612b63565b9091508190612ba8565b9092916001600160401b038111610a4557612bde81611b65845461283e565b6000601f8211600114612c185781929394600092612c0d575b50508160011b916000199060031b1c1916179055565b013590503880612bf7565b601f198216948382526020918281209281905b888210612c6457505083600195969710612c4a575b505050811b019055565b0135600019600384901b60f8161c19169055388080612c40565b80600184968294958701358155019501920190612c2b565b600019811461051a5760010190565b903590601e198136030182121561019557018035906001600160401b0382116101955760200191813603831361019557565b9082101561282857612ae79160051b810190612c8b565b908060209392818452848401376000828201840152601f01601f1916010190565b15612cfc57565b60405162461bcd60e51b8152602060048201526012602482015271115b1958dd1a5bdb881b9bdd08199bdd5b9960721b6044820152606490fd5b15612d3d57565b60405162461bcd60e51b81526020600482015260126024820152710456c656374696f6e206e6f742073657475760741b6044820152606490fd5b6001600160401b038111610a455760051b60200190565b90612d9882612d77565b612da56040519182612742565b8281528092612db6601f1991612d77565b0190602036910137565b90612dca82612d77565b612dd76040519182612742565b8281528092612de8601f1991612d77565b019060005b828110612df957505050565b806060602080938501015201612ded565b80518210156128285760209160051b010190565b908154612e2a81612d77565b92612e386040519485612742565b818452600090815260208082208186015b848410612e57575050505050565b6001838192612e6585612878565b815201920193019290612e4956fea2646970667358221220fc9df315a56bdcbd3eb277521544807c791a5a9a790e43632e57e7dbb70fc34a64736f6c63430008130033",
+        "sourceMap": "104:11151:16:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;:::i;:::-;;;774:67;104:11151;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;335:72;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;7769:18;104:11151;;;;;;;;;;;;;;;;;;;;;;7844:36;104:11151;;;;;;;;;;;;;;;;;;;7844:36;:::i;:::-;7900:16;;104:11151;;;;;;;;;8071:43;104:11151;;;;;;;;;;;;7960:21;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;8071:43;;;104:11151;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;272:57;104:11151;;;;;;;;;272:57;;;;;;;;:::i;:::-;104:11151;;;272:57;;;;;:::i;:::-;;104:11151;;272:57;;;;;:::i;:::-;;104:11151;;272:57;;;;;:::i;:::-;;;104:11151;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;635:50;104:11151;;;;;;;;;635:50;;;;;;;;104:11151;635:50;;:::i;:::-;;;:::i;:::-;104:11151;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;4323:11;;;;104:11151;4314:43;104:11151;;;;;;4322:12;4314:43;:::i;:::-;4368:8;104:11151;4368:8;;104:11151;;;;;;;;;4591:34;4406:11;104:11151;4406:11;;;;104:11151;4451:24;;;104:11151;:::i;:::-;4510:18;104:11151;;4510:18;;104:11151;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;4591:34;;;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;565:63;104:11151;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;7029:13;104:11151;;;;;;;;;:::i;:::-;;;;;7226:36;104:11151;;;;;;;;;;;;;;;7029:13;104:11151;;;;;;;;;:::i;:::-;;;-1:-1:-1;;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;:::i;:::-;;;;;;;;;;;8994:19;;;;104:11151;;;;;;;;;;;;;;:::i;:::-;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;6608:34;104:11151;;;;;;;;;;;;;;;6608:34;104:11151;;;;;;6687:39;104:11151;;;;;;;;;;;;;;;;;;6687:39;104:11151;;;;;;;;;;;:::i;:::-;;;:::i;:::-;;;;;;;;;;;;;;;6812:32;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;6608:34;104:11151;;;;;;;;;;;;;;;;;;6756:34;104:11151;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;-1:-1:-1;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6812:32;104:11151;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;7478:16;104:11151;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;;;;-1:-1:-1;104:11151:16;;;;;;;;;;;;;;;;;;;;;7538:35;;104:11151;;;;;;;;:::i;:::-;;;;;:::i;:::-;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;;:::i;:::-;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;:::i;:::-;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;:::i;:::-;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;:::i;:::-;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;:::i;:::-;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;:::i;:::-;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;4926:27;104:11151;;;;;;:::i;:::-;4846:11;104:11151;;;;;;;;;;;;;;;;;;4846:11;104:11151;;;4838:42;104:11151;;;;;4838:42;:::i;:::-;104:11151;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;-1:-1:-1;;104:11151:16;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;:::i;:::-;;;;;;;;;9278:19;104:11151;9278:19;;104:11151;;;;;;;;;;9368:18;;;;:::i;:::-;9413:17;;;;:::i;:::-;9446:10;104:11151;9458:7;;;;;;104:11151;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;9467:3::-;9504:8;;9467:3;9504:8;;;:::i;:::-;104:11151;;9486:38;;;;:::i;:::-;104:11151;;9558:8;;;;;:::i;:::-;:22;;104:11151;:::i;:::-;9538:42;;;;:::i;:::-;;;;;;:::i;:::-;;9467:3;:::i;:::-;9446:10;;104:11151;;;;;;-1:-1:-1;;104:11151:16;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;2546:13;2538:44;104:11151;2546:13;;;104:11151;;2538:44;:::i;:::-;2618:24;;;104:11151;2600:15;:42;104:11151;;;2691:20;104:11151;2691:20;;;;;;104:11151;:::i;:::-;;;2806:16;;2743:114;2760:25;;;;;;104:11151;2787:3;2828:17;;;;;:::i;:::-;104:11151;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;;;:::i;:::-;;;;;;2787:3;104:11151;;;;:::i;:::-;2787:3;:::i;:::-;2748:10;;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;9767:18;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;9827:14;104:11151;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;:::i;:::-;;;;;;-1:-1:-1;;104:11151:16;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;221:44;;;:::i;:::-;;;;;;:::i;:::-;;;;;;;:::i;:::-;;104:11151;221:44;;104:11151;221:44;;;;104:11151;221:44;;;;104:11151;221:44;;;;104:11151;221:44;;;;104:11151;221:44;;;;104:11151;221:44;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;104:11151;221:44;;;;104:11151;221:44;;;104:11151;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;:::i;:::-;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;:::i;:::-;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;221:44;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;:::i;:::-;;;;;;-1:-1:-1;;104:11151:16;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;:::i;:::-;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;6030:18;104:11151;;;;;;;;;;;;;;;;;6105:36;104:11151;;;;;;;;;;;;;;;;;;;6105:36;:::i;:::-;6160:12;;104:11151;6160:12;;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;;;;-1:-1:-1;104:11151:16;;;;;;;;;;;;;;;;;6160:12;;104:11151;;-1:-1:-1;;104:11151:16;;;;;;;;;;;6348:35;;104:11151;;;;;;;;;;;:::i;:::-;;;;;;6348:35;;;104:11151;;;;;;:::i;:::-;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;:::i;:::-;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;104:11151:16;;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;8348:16;;;;104:11151;;8326:45;;104:11151;;;8419:22;;;;;;8547:11;;;104:11151;;-1:-1:-1;;104:11151:16;;;;;;;;;;8580:32;;104:11151;;;;;8547:11;;104:11151;:::i;8443:3::-;104:11151;;;;;;;;;;;8462:14;104:11151;;;;;;8489:19;;;;;:::i;:::-;104:11151;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;8443:3;104:11151;;;;;;;;;;;;;;;;;;8443:3;:::i;:::-;8407:10;;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;;;;8443:3;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;-1:-1:-1;8443:3:16;;104:11151;;;;;;;-1:-1:-1;104:11151:16;;-1:-1:-1;104:11151:16;;-1:-1:-1;104:11151:16;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;5175:18;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;;;;5250:36;104:11151;;;;;;;;;;;;;;;;5250:36;:::i;:::-;5306:12;;104:11151;5306:12;;104:11151;;;;;;;5175:18;5353:11;;104:11151;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;104:11151:16;;;;;;;;;;;;;5386:16;104:11151;;;;;;;;;;;:::i;:::-;;;:::i;:::-;;;;;;;;;;5464:35;;104:11151;;;;;;;-1:-1:-1;;;;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;-1:-1:-1;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5464:35;104:11151;;;;;;;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;:::i;:::-;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;:::i;:::-;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;:::i;:::-;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;:::i;:::-;;1310:33;104:11151;;;;;;;;;;;;;;;;;;1310:33;104:11151;;;;1310:33;104:11151;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;1469:14;;104:11151;1469:14;;104:11151;:::i;:::-;;1508:13;;;;;104:11151;:::i;:::-;;;1545:26;;;104:11151;;;1608:24;;;104:11151;;;;1667:11;;104:11151;;;1708:9;;;104:11151;;;1745:12;;;104:11151;1780:13;104:11151;;-1:-1:-1;;104:11151:16;;;;;-1:-1:-1;1827:25:16;;;;;;104:11151;;;;;2234:54;104:11151;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;1854:3::-;1508:13;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2036:17;;;;;:::i;:::-;104:11151;;;;;;;;:::i;:::-;1508:13;104:11151;;;;;;;:::i;:::-;2022:61;104:11151;2022:61;;104:11151;;;;;;;;:::i;:::-;;;;;2022:61;;104:11151;;;;;;:::i;:::-;;;;;2022:61;;104:11151;;;2022:61;;104:11151;;;2022:61;;104:11151;;;2022:61;;104:11151;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;;;;:::i;:::-;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2022:61;;104:11151;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;1508:13;104:11151;;;;:::i;:::-;1508:13;104:11151;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1508:13;104:11151;;;;;2022:61;;104:11151;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;;:::i;:::-;;;;;:::i;:::-;;;;;;;;;;;;2170:35;104:11151;;;;1854:3;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2022:61;104:11151;2022:61;;104:11151;;;;;;;;;;;2022:61;;104:11151;;;;;;2022:61;;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;;;;1508:13;104:11151;;;;;;1508:13;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;1508:13;104:11151;;;;;;;;;;2170:35;;;1854:3;:::i;:::-;1815:10;;104:11151;;;;-1:-1:-1;104:11151:16;;;;;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;;;;;1854:3;104:11151;;;;;;2170:35;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;104:11151:16;;;;;;;1508:13;104:11151;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;1508:13;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;104:11151:16;;;;;;;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;692:75;104:11151;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;5720:13;104:11151;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;5720:13;104:11151;;5712:44;104:11151;;;5712:44;:::i;:::-;104:11151;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;10238:18;104:11151;;;;;;;;;;;;;;;;;;;10313:36;104:11151;;;;;;;;;;;;10313:19;104:11151;;;;;;10313:36;:::i;:::-;10406:12;;;104:11151;10406:12;;104:11151;;;;;;;;;;;;10488:14;104:11151;;;;;;;;;;;;;;10238:18;104:11151;;;10381:11;;104:11151;:::i;:::-;;;:::i;:::-;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;10802:16;104:11151;;;10849:17;;;;:::i;:::-;10885:18;;;;:::i;:::-;10919:10;104:11151;10931:7;;;;;;104:11151;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;10940:3::-;10975:19;104:11151;10975:19;10940:3;10975:19;;;:::i;:::-;104:11151;;:::i;:::-;10959:35;;;;:::i;:::-;;;;;;:::i;:::-;;104:11151;;;;;;;;;;;;11020:14;104:11151;;;;;;11047:13;;;;:::i;:::-;;104:11151;:::i;:::-;;11008:53;;;;:::i;:::-;104:11151;10940:3;:::i;:::-;10919:10;;104:11151;;;;;;-1:-1:-1;;104:11151:16;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;11218:16;104:11151;;;;;;;:::i;:::-;;;;;;;;;;;;;;:::i;:::-;;;;;;-1:-1:-1;;104:11151:16;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;414:68;;;;;;;;104:11151;414:68;;:::i;104:11151::-;;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;:::o;:::-;;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;:::o;:::-;;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;:::o;:::-;;;;;;;;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;:::o;:::-;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;;:::i;:::-;;;;;;;;;;;;;;;;;-1:-1:-1;104:11151:16;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;:::i;:::-;;:::o;:::-;;;;;;;;-1:-1:-1;;104:11151:16;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;:::o;:::-;;;;;;;;-1:-1:-1;104:11151:16;;-1:-1:-1;104:11151:16;;;-1:-1:-1;104:11151:16;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;104:11151:16;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;:::o;:::-;;;;;-1:-1:-1;104:11151:16;;;;-1:-1:-1;104:11151:16;;-1:-1:-1;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;:::i;:::-;;;-1:-1:-1;;104:11151:16;;;;:::o;:::-;;;;;;;;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;104:11151:16;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;104:11151:16;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;:::i;:::-;;;;;;:::o;:::-;;-1:-1:-1;;104:11151:16;;;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;;;;;;;:::o;:::-;;-1:-1:-1;;104:11151:16;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;-1:-1:-1;;104:11151:16;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;:::i;:::-;;;;;;;;-1:-1:-1;104:11151:16;;;-1:-1:-1;104:11151:16;;;;;-1:-1:-1;104:11151:16;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;:::o;:::-;;;-1:-1:-1;104:11151:16;;-1:-1:-1;104:11151:16;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;-1:-1:-1;104:11151:16;;;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;-1:-1:-1;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;-1:-1:-1;;104:11151:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;104:11151:16;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;-1:-1:-1;104:11151:16;;;;;;;;-1:-1:-1;;104:11151:16;;;;:::o;:::-;;;;:::o;:::-;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;:::o;:::-;;;-1:-1:-1;;;104:11151:16;;;;;;;;;;;;-1:-1:-1;;;104:11151:16;;;;;;;;-1:-1:-1;;;;;104:11151:16;;;;;;;;;:::o;:::-;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;;;;:::i;:::-;;;;;;;;:::o;:::-;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;;;;:::i;:::-;;;-1:-1:-1;104:11151:16;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;:::i;:::-;;;;;;;;:::i;:::-;;;;-1:-1:-1;104:11151:16;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;:::i;:::-;;;;;;;;;;;",
+        "linkReferences": {}
+    },
+    "methodIdentifiers": {
+        "authorityIdToIndex(string,uint256)": "eeaba315",
+        "createElection(string,string,string,uint256,uint256,uint256,uint256,uint256,string[])": "1985ee8a",
+        "dkgCommitments(string,uint256,uint256)": "0b8d59cf",
+        "electionAuthorities(string,uint256)": "e638faeb",
+        "elections(string)": "4a3ccc96",
+        "encryptedTallies(string,uint256)": "e5a993bc",
+        "encryptedVotehash(string,string)": "43709a01",
+        "finalVoteCount(string,string)": "f22a3402",
+        "finalizeElectionSetup(string,uint256,string,bytes32)": "d8fbfc47",
+        "getAuthorities(string)": "a1e520f2",
+        "getAuthoritiesBasic(string)": "5bc8c465",
+        "getAuthorityActivity(string,uint256)": "119cd0a4",
+        "getCommitments(string,uint256)": "4ac7ac68",
+        "getElectionDetails(string)": "928cb52e",
+        "getEncryptedTally(string)": "0e55e3a1",
+        "getFinalResult(string)": "0ec8e14c",
+        "nullifierUsed(string,string)": "cde49143",
+        "partialDecryptionhash(string,uint256)": "16248511",
+        "preelectionendsonly(string,string,string[])": "56704169",
+        "publishEncryptedTally(string,bytes[])": "9509bebe",
+        "publishFinalResult(string,uint256[])": "39c9a34c",
+        "setElectionPublicKey(string,bytes)": "9e778669",
+        "setRound1Active(string)": "5fb8460c",
+        "setRound2Active(string)": "15143d58",
+        "submitDKGRound1(string,uint256,bytes,bytes)": "26a263fd",
+        "submitDKGRound2(string,uint256,bytes[])": "3cd6d30a",
+        "submitPartialDecryption(string,uint256,bytes32)": "eaceead3",
+        "submitVote(string,string,bytes32)": "a9ec02ce"
+    },
+    "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"authorityId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"authorityIndex\",\"type\":\"uint256\"}],\"name\":\"AuthorityAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"authorityIndex\",\"type\":\"uint256\"}],\"name\":\"DKGRound1Submitted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"authorityIndex\",\"type\":\"uint256\"}],\"name\":\"DKGRound2Submitted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"electionName\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"creatorName\",\"type\":\"string\"}],\"name\":\"ElectionCreated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"}],\"name\":\"ElectionPublicKeySet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"}],\"name\":\"ElectionSetupCompleted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"}],\"name\":\"EncryptedTallyPublished\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"}],\"name\":\"FinalResultPublished\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"authorityIndex\",\"type\":\"uint256\"}],\"name\":\"PartialDecryptionSubmitted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"}],\"name\":\"Round1Activated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"nullifier\",\"type\":\"string\"}],\"name\":\"VoteSubmitted\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"authorityIdToIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"electionName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"creatorName\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"preelectionDataStartTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"preelectionDataEndTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"electionStartTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"electionEndTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"resultTime\",\"type\":\"uint256\"},{\"internalType\":\"string[]\",\"name\":\"AuthorityNames\",\"type\":\"string[]\"}],\"name\":\"createElection\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"dkgCommitments\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"electionAuthorities\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"authorityId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"authorityName\",\"type\":\"string\"},{\"internalType\":\"bytes\",\"name\":\"publicKey\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"publicKeyProof\",\"type\":\"bytes\"},{\"internalType\":\"bool\",\"name\":\"round1Done\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"round2Done\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"decryptionDone\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"elections\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"electionName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"creatorName\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"startTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"endTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"resultTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"threshold\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"degree\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"faceDatabaseHash\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"registrationMerkleRoot\",\"type\":\"string\"},{\"internalType\":\"bytes\",\"name\":\"electionPublicKey\",\"type\":\"bytes\"},{\"internalType\":\"string\",\"name\":\"preElectionDAGRoot\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"preelectionDataStartTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"preelectionDataEndTime\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"initialized\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"setupDone\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"completed\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"round1Active\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"round2Active\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"finalizedDKG\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"encryptedTallies\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"encryptedVotehash\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"finalVoteCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"polynomial_degree\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"registrationMerkleRoot\",\"type\":\"string\"},{\"internalType\":\"bytes32\",\"name\":\"faceDatabaseHash\",\"type\":\"bytes32\"}],\"name\":\"finalizeElectionSetup\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"}],\"name\":\"getAuthorities\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"authorityId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"authorityName\",\"type\":\"string\"},{\"internalType\":\"bytes\",\"name\":\"publicKey\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"publicKeyProof\",\"type\":\"bytes\"},{\"internalType\":\"bool\",\"name\":\"round1Done\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"round2Done\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"decryptionDone\",\"type\":\"bool\"}],\"internalType\":\"struct IElectionRegistry.Authority[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"}],\"name\":\"getAuthoritiesBasic\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"authorityIds\",\"type\":\"uint256[]\"},{\"internalType\":\"string[]\",\"name\":\"authorityNames\",\"type\":\"string[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"authorityId\",\"type\":\"uint256\"}],\"name\":\"getAuthorityActivity\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"publicKey\",\"type\":\"bytes\"},{\"internalType\":\"bool\",\"name\":\"round1Done\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"round2Done\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"decryptionDone\",\"type\":\"bool\"},{\"internalType\":\"bytes[]\",\"name\":\"commitments\",\"type\":\"bytes[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"authorityId\",\"type\":\"uint256\"}],\"name\":\"getCommitments\",\"outputs\":[{\"internalType\":\"bytes[]\",\"name\":\"\",\"type\":\"bytes[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"}],\"name\":\"getElectionDetails\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"electionName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"creatorName\",\"type\":\"string\"},{\"internalType\":\"string[]\",\"name\":\"candidateNames\",\"type\":\"string[]\"},{\"internalType\":\"uint256\",\"name\":\"startTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"endTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"resultTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"threshold\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"degree\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"faceDatabaseHash\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"registrationMerkleRoot\",\"type\":\"string\"},{\"internalType\":\"bytes\",\"name\":\"electionPublicKey\",\"type\":\"bytes\"},{\"internalType\":\"string\",\"name\":\"preElectionDAGRoot\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"preelectionDataStartTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"preelectionDataEndTime\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"initialized\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"setupDone\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"completed\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"round1Active\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"round2Active\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"finalizedDKG\",\"type\":\"bool\"}],\"internalType\":\"struct IElectionRegistry.Election\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"}],\"name\":\"getEncryptedTally\",\"outputs\":[{\"internalType\":\"bytes[]\",\"name\":\"\",\"type\":\"bytes[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"}],\"name\":\"getFinalResult\",\"outputs\":[{\"internalType\":\"string[]\",\"name\":\"candidates\",\"type\":\"string[]\"},{\"internalType\":\"uint256[]\",\"name\":\"counts\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"nullifierUsed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"partialDecryptionhash\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"preElectionDAGRoot\",\"type\":\"string\"},{\"internalType\":\"string[]\",\"name\":\"candidateNames\",\"type\":\"string[]\"}],\"name\":\"preelectionendsonly\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"internalType\":\"bytes[]\",\"name\":\"encryptedTally\",\"type\":\"bytes[]\"}],\"name\":\"publishEncryptedTally\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"internalType\":\"uint256[]\",\"name\":\"finalCounts\",\"type\":\"uint256[]\"}],\"name\":\"publishFinalResult\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"internalType\":\"bytes\",\"name\":\"electionPublicKey\",\"type\":\"bytes\"}],\"name\":\"setElectionPublicKey\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"}],\"name\":\"setRound1Active\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"}],\"name\":\"setRound2Active\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"authorityId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"publicKey\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"publicKeyProof\",\"type\":\"bytes\"}],\"name\":\"submitDKGRound1\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"authorityId\",\"type\":\"uint256\"},{\"internalType\":\"bytes[]\",\"name\":\"commitments\",\"type\":\"bytes[]\"}],\"name\":\"submitDKGRound2\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"authorityId\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"partialdecryptionhash\",\"type\":\"bytes32\"}],\"name\":\"submitPartialDecryption\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"electionId\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"nullifier\",\"type\":\"string\"},{\"internalType\":\"bytes32\",\"name\":\"encryptedVotehashes\",\"type\":\"bytes32\"}],\"name\":\"submitVote\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/ElectionRegistry.sol\":\"ElectionRegistry\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":forge-std/=lib/forge-std/src/\"],\"viaIR\":true},\"sources\":{\"src/ElectionRegistry.sol\":{\"keccak256\":\"0x0e0da9b8354a3cd2d91a702ed865dd9cd9d877ae650702b081cf520b01b72a3e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://351766be7c44027b289dcc36203864d2137bfcca42f0b55b465bff6c45b090a4\",\"dweb:/ipfs/QmQQx5bw1vmp9xGXqLaGMDJrZHYCZrE7E59u7sF9gaofLP\"]},\"src/interfaces/IElectionRegistry.sol\":{\"keccak256\":\"0x55c8ae12a0dabffc9b728e9b28124249000c7e9ebf84558270bd5acbd6e0a86f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f4496e777c517363eb09e008b7f6d053a19b238b989d1390c78627df3a9884e8\",\"dweb:/ipfs/QmUVbHG4edcBJSZBayLXRAcfVbwNrH84gmEomMGrWHzd3m\"]}},\"version\":1}",
+    "metadata": {
+        "compiler": {
+            "version": "0.8.19+commit.7dd6d404"
+        },
+        "language": "Solidity",
+        "output": {
+            "abi": [
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string",
+                            "indexed": false
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "authorityId",
+                            "type": "uint256",
+                            "indexed": false
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "authorityIndex",
+                            "type": "uint256",
+                            "indexed": false
+                        }
+                    ],
+                    "type": "event",
+                    "name": "AuthorityAdded",
+                    "anonymous": false
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string",
+                            "indexed": false
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "authorityIndex",
+                            "type": "uint256",
+                            "indexed": false
+                        }
+                    ],
+                    "type": "event",
+                    "name": "DKGRound1Submitted",
+                    "anonymous": false
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string",
+                            "indexed": false
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "authorityIndex",
+                            "type": "uint256",
+                            "indexed": false
+                        }
+                    ],
+                    "type": "event",
+                    "name": "DKGRound2Submitted",
+                    "anonymous": false
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string",
+                            "indexed": false
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "electionName",
+                            "type": "string",
+                            "indexed": false
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "creatorName",
+                            "type": "string",
+                            "indexed": false
+                        }
+                    ],
+                    "type": "event",
+                    "name": "ElectionCreated",
+                    "anonymous": false
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string",
+                            "indexed": false
+                        }
+                    ],
+                    "type": "event",
+                    "name": "ElectionPublicKeySet",
+                    "anonymous": false
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string",
+                            "indexed": false
+                        }
+                    ],
+                    "type": "event",
+                    "name": "ElectionSetupCompleted",
+                    "anonymous": false
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string",
+                            "indexed": false
+                        }
+                    ],
+                    "type": "event",
+                    "name": "EncryptedTallyPublished",
+                    "anonymous": false
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string",
+                            "indexed": false
+                        }
+                    ],
+                    "type": "event",
+                    "name": "FinalResultPublished",
+                    "anonymous": false
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string",
+                            "indexed": false
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "authorityIndex",
+                            "type": "uint256",
+                            "indexed": false
+                        }
+                    ],
+                    "type": "event",
+                    "name": "PartialDecryptionSubmitted",
+                    "anonymous": false
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string",
+                            "indexed": false
+                        }
+                    ],
+                    "type": "event",
+                    "name": "Round1Activated",
+                    "anonymous": false
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string",
+                            "indexed": false
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "nullifier",
+                            "type": "string",
+                            "indexed": false
+                        }
+                    ],
+                    "type": "event",
+                    "name": "VoteSubmitted",
+                    "anonymous": false
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "authorityIdToIndex",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "electionName",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "creatorName",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "preelectionDataStartTime",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "preelectionDataEndTime",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "electionStartTime",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "electionEndTime",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "resultTime",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string[]",
+                            "name": "AuthorityNames",
+                            "type": "string[]"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "name": "createElection"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "dkgCommitments",
+                    "outputs": [
+                        {
+                            "internalType": "bytes",
+                            "name": "",
+                            "type": "bytes"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "electionAuthorities",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "authorityId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "authorityName",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "publicKey",
+                            "type": "bytes"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "publicKeyProof",
+                            "type": "bytes"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "round1Done",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "round2Done",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "decryptionDone",
+                            "type": "bool"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "elections",
+                    "outputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "electionName",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "creatorName",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "startTime",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "endTime",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "resultTime",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "threshold",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "degree",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bytes32",
+                            "name": "faceDatabaseHash",
+                            "type": "bytes32"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "registrationMerkleRoot",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "electionPublicKey",
+                            "type": "bytes"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "preElectionDAGRoot",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "preelectionDataStartTime",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "preelectionDataEndTime",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "initialized",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "setupDone",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "completed",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "round1Active",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "round2Active",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "finalizedDKG",
+                            "type": "bool"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "encryptedTallies",
+                    "outputs": [
+                        {
+                            "internalType": "bytes",
+                            "name": "",
+                            "type": "bytes"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "encryptedVotehash",
+                    "outputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "",
+                            "type": "bytes32"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "finalVoteCount",
+                    "outputs": [
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "polynomial_degree",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "registrationMerkleRoot",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "bytes32",
+                            "name": "faceDatabaseHash",
+                            "type": "bytes32"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "name": "finalizeElectionSetup"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "getAuthorities",
+                    "outputs": [
+                        {
+                            "internalType": "struct IElectionRegistry.Authority[]",
+                            "name": "",
+                            "type": "tuple[]",
+                            "components": [
+                                {
+                                    "internalType": "uint256",
+                                    "name": "authorityId",
+                                    "type": "uint256"
+                                },
+                                {
+                                    "internalType": "string",
+                                    "name": "authorityName",
+                                    "type": "string"
+                                },
+                                {
+                                    "internalType": "bytes",
+                                    "name": "publicKey",
+                                    "type": "bytes"
+                                },
+                                {
+                                    "internalType": "bytes",
+                                    "name": "publicKeyProof",
+                                    "type": "bytes"
+                                },
+                                {
+                                    "internalType": "bool",
+                                    "name": "round1Done",
+                                    "type": "bool"
+                                },
+                                {
+                                    "internalType": "bool",
+                                    "name": "round2Done",
+                                    "type": "bool"
+                                },
+                                {
+                                    "internalType": "bool",
+                                    "name": "decryptionDone",
+                                    "type": "bool"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "getAuthoritiesBasic",
+                    "outputs": [
+                        {
+                            "internalType": "uint256[]",
+                            "name": "authorityIds",
+                            "type": "uint256[]"
+                        },
+                        {
+                            "internalType": "string[]",
+                            "name": "authorityNames",
+                            "type": "string[]"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "authorityId",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "getAuthorityActivity",
+                    "outputs": [
+                        {
+                            "internalType": "bytes",
+                            "name": "publicKey",
+                            "type": "bytes"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "round1Done",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "round2Done",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bool",
+                            "name": "decryptionDone",
+                            "type": "bool"
+                        },
+                        {
+                            "internalType": "bytes[]",
+                            "name": "commitments",
+                            "type": "bytes[]"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "authorityId",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "getCommitments",
+                    "outputs": [
+                        {
+                            "internalType": "bytes[]",
+                            "name": "",
+                            "type": "bytes[]"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "getElectionDetails",
+                    "outputs": [
+                        {
+                            "internalType": "struct IElectionRegistry.Election",
+                            "name": "",
+                            "type": "tuple",
+                            "components": [
+                                {
+                                    "internalType": "string",
+                                    "name": "electionId",
+                                    "type": "string"
+                                },
+                                {
+                                    "internalType": "string",
+                                    "name": "electionName",
+                                    "type": "string"
+                                },
+                                {
+                                    "internalType": "string",
+                                    "name": "creatorName",
+                                    "type": "string"
+                                },
+                                {
+                                    "internalType": "string[]",
+                                    "name": "candidateNames",
+                                    "type": "string[]"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "startTime",
+                                    "type": "uint256"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "endTime",
+                                    "type": "uint256"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "resultTime",
+                                    "type": "uint256"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "threshold",
+                                    "type": "uint256"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "degree",
+                                    "type": "uint256"
+                                },
+                                {
+                                    "internalType": "bytes32",
+                                    "name": "faceDatabaseHash",
+                                    "type": "bytes32"
+                                },
+                                {
+                                    "internalType": "string",
+                                    "name": "registrationMerkleRoot",
+                                    "type": "string"
+                                },
+                                {
+                                    "internalType": "bytes",
+                                    "name": "electionPublicKey",
+                                    "type": "bytes"
+                                },
+                                {
+                                    "internalType": "string",
+                                    "name": "preElectionDAGRoot",
+                                    "type": "string"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "preelectionDataStartTime",
+                                    "type": "uint256"
+                                },
+                                {
+                                    "internalType": "uint256",
+                                    "name": "preelectionDataEndTime",
+                                    "type": "uint256"
+                                },
+                                {
+                                    "internalType": "bool",
+                                    "name": "initialized",
+                                    "type": "bool"
+                                },
+                                {
+                                    "internalType": "bool",
+                                    "name": "setupDone",
+                                    "type": "bool"
+                                },
+                                {
+                                    "internalType": "bool",
+                                    "name": "completed",
+                                    "type": "bool"
+                                },
+                                {
+                                    "internalType": "bool",
+                                    "name": "round1Active",
+                                    "type": "bool"
+                                },
+                                {
+                                    "internalType": "bool",
+                                    "name": "round2Active",
+                                    "type": "bool"
+                                },
+                                {
+                                    "internalType": "bool",
+                                    "name": "finalizedDKG",
+                                    "type": "bool"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "getEncryptedTally",
+                    "outputs": [
+                        {
+                            "internalType": "bytes[]",
+                            "name": "",
+                            "type": "bytes[]"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "getFinalResult",
+                    "outputs": [
+                        {
+                            "internalType": "string[]",
+                            "name": "candidates",
+                            "type": "string[]"
+                        },
+                        {
+                            "internalType": "uint256[]",
+                            "name": "counts",
+                            "type": "uint256[]"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "nullifierUsed",
+                    "outputs": [
+                        {
+                            "internalType": "bool",
+                            "name": "",
+                            "type": "bool"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "",
+                            "type": "uint256"
+                        }
+                    ],
+                    "stateMutability": "view",
+                    "type": "function",
+                    "name": "partialDecryptionhash",
+                    "outputs": [
+                        {
+                            "internalType": "bytes32",
+                            "name": "",
+                            "type": "bytes32"
+                        }
+                    ]
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "preElectionDAGRoot",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string[]",
+                            "name": "candidateNames",
+                            "type": "string[]"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "name": "preelectionendsonly"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "bytes[]",
+                            "name": "encryptedTally",
+                            "type": "bytes[]"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "name": "publishEncryptedTally"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256[]",
+                            "name": "finalCounts",
+                            "type": "uint256[]"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "name": "publishFinalResult"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "electionPublicKey",
+                            "type": "bytes"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "name": "setElectionPublicKey"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "name": "setRound1Active"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "name": "setRound2Active"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "authorityId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "publicKey",
+                            "type": "bytes"
+                        },
+                        {
+                            "internalType": "bytes",
+                            "name": "publicKeyProof",
+                            "type": "bytes"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "name": "submitDKGRound1"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "authorityId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bytes[]",
+                            "name": "commitments",
+                            "type": "bytes[]"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "name": "submitDKGRound2"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "authorityId",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "bytes32",
+                            "name": "partialdecryptionhash",
+                            "type": "bytes32"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "name": "submitPartialDecryption"
+                },
+                {
+                    "inputs": [
+                        {
+                            "internalType": "string",
+                            "name": "electionId",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "nullifier",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "bytes32",
+                            "name": "encryptedVotehashes",
+                            "type": "bytes32"
+                        }
+                    ],
+                    "stateMutability": "nonpayable",
+                    "type": "function",
+                    "name": "submitVote"
+                }
+            ],
+            "devdoc": {
+                "kind": "dev",
+                "methods": {},
+                "version": 1
+            },
+            "userdoc": {
+                "kind": "user",
+                "methods": {},
+                "version": 1
+            }
+        },
+        "settings": {
+            "remappings": [
+                "forge-std/=lib/forge-std/src/"
+            ],
+            "optimizer": {
+                "enabled": true,
+                "runs": 200
+            },
+            "metadata": {
+                "bytecodeHash": "ipfs"
+            },
+            "compilationTarget": {
+                "src/ElectionRegistry.sol": "ElectionRegistry"
+            },
+            "evmVersion": "paris",
+            "libraries": {},
+            "viaIR": true
+        },
+        "sources": {
+            "src/ElectionRegistry.sol": {
+                "keccak256": "0x0e0da9b8354a3cd2d91a702ed865dd9cd9d877ae650702b081cf520b01b72a3e",
+                "urls": [
+                    "bzz-raw://351766be7c44027b289dcc36203864d2137bfcca42f0b55b465bff6c45b090a4",
+                    "dweb:/ipfs/QmQQx5bw1vmp9xGXqLaGMDJrZHYCZrE7E59u7sF9gaofLP"
+                ],
+                "license": "MIT"
+            },
+            "src/interfaces/IElectionRegistry.sol": {
+                "keccak256": "0x55c8ae12a0dabffc9b728e9b28124249000c7e9ebf84558270bd5acbd6e0a86f",
+                "urls": [
+                    "bzz-raw://f4496e777c517363eb09e008b7f6d053a19b238b989d1390c78627df3a9884e8",
+                    "dweb:/ipfs/QmUVbHG4edcBJSZBayLXRAcfVbwNrH84gmEomMGrWHzd3m"
+                ],
+                "license": "MIT"
+            }
+        },
+        "version": 1
+    },
+    "id": 16
+}
