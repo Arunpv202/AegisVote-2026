@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -15,8 +16,17 @@ import useAuthStore from "../../store/useAuthStore";
 
 export default function UserDashboard() {
   const navigate = useNavigate();
-  const { username } = useAuthStore();
+  const { username, role } = useAuthStore();
   const displayUser = username || localStorage.getItem("username") || "Voter";
+
+  // Protect Route & Fix Refresh Redirection
+  useEffect(() => {
+    if (!username || role !== "user") {
+      if (role === "admin") navigate("/admin/dashboard");
+      else if (role === "authority") navigate("/authority/dashboard");
+      else navigate("/login");
+    }
+  }, [username, role, navigate]);
 
   return (
     <div className="min-h-screen bg-[#020617] text-white flex flex-col font-sans relative overflow-hidden">

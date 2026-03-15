@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ShieldAlert, Vote, LogOut, ArrowRight, ShieldCheck, Globe, KeySquare } from "lucide-react";
@@ -5,8 +6,17 @@ import useAuthStore from "../../store/useAuthStore";
 
 export default function AuthorityDashboard() {
     const navigate = useNavigate();
-    const { username, setRole } = useAuthStore();
+    const { username, role, setRole } = useAuthStore();
     const displayUser = username || localStorage.getItem("username") || "Authority";
+
+    // Protect Route & Fix Refresh Redirection
+    useEffect(() => {
+        if (!username || role !== "authority") {
+            if (role === "admin") navigate("/admin/dashboard");
+            else if (role === "user") navigate("/user/dashboard");
+            else navigate("/login");
+        }
+    }, [username, role, navigate]);
 
     const handleLogout = () => {
         setRole(null);

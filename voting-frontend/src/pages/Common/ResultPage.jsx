@@ -110,6 +110,7 @@ export default function ResultPage() {
     );
 
     const winner = candidates[0];
+    const isTie = candidates.length > 1 && candidates[0].vote_count === candidates[1].vote_count;
 
     return (
         <div className="min-h-screen bg-[#020617] text-white p-6 font-sans relative overflow-hidden">
@@ -146,41 +147,61 @@ export default function ResultPage() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-20">
                     {/* Winner Spotlight */}
-                    <motion.div 
-                        initial={{ y: 20, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        className="lg:col-span-5 flex flex-col items-center"
-                    >
-                        <div className="relative group w-full max-w-[18rem] sm:max-w-sm">
-                            <div className="absolute inset-0 bg-indigo-600/20 rounded-[3rem] blur-3xl group-hover:bg-indigo-600/30 transition-all duration-500" />
-                            
-                            <div className="relative bg-slate-900/40 backdrop-blur-2xl border border-white/10 rounded-[3rem] p-6 sm:p-10 flex flex-col items-center">
-                                <div className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 bg-yellow-500 text-black p-3 sm:p-4 rounded-3xl rotate-12 shadow-xl z-20">
-                                    <Award size={24} className="sm:hidden" />
-                                    <Award size={32} className="hidden sm:block" />
-                                </div>
+                    {!isTie && winner && (
+                        <motion.div 
+                            initial={{ y: 20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            className="lg:col-span-5 flex flex-col items-center"
+                        >
+                            <div className="relative group w-full max-w-[18rem] sm:max-w-sm">
+                                <div className="absolute inset-0 bg-indigo-600/20 rounded-[3rem] blur-3xl group-hover:bg-indigo-600/30 transition-all duration-500" />
                                 
-                                <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mb-6 sm:mb-8 border-4 border-indigo-500/30 shadow-2xl relative">
-                                    {winner?.photo_cid ? (
-                                        <img 
-                                            src={`/api/pre-election/ipfs-image/${winner.photo_cid}`} 
-                                            alt={winner.candidate_name}
-                                            className="w-full h-full object-cover"
-                                            onError={(e) => {
-                                                e.target.onerror = null;
-                                                e.target.src = "https://ui-avatars.com/api/?name=" + encodeURIComponent(winner.candidate_name) + "&background=random&size=256";
-                                            }}
-                                        />
-                                    ) : (
-                                        <div className="w-full h-full bg-slate-800 flex items-center justify-center text-gray-600">
-                                            No Photo
-                                        </div>
-                                    )}
+                                <div className="relative bg-slate-900/40 backdrop-blur-2xl border border-white/10 rounded-[3rem] p-6 sm:p-10 flex flex-col items-center">
+                                    <div className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 bg-yellow-500 text-black p-3 sm:p-4 rounded-3xl rotate-12 shadow-xl z-20">
+                                        <Award size={24} className="sm:hidden" />
+                                        <Award size={32} className="hidden sm:block" />
+                                    </div>
+                                    
+                                    {/* Equal Weightage Photos */}
+                                <div className="flex gap-4 mb-8">
+                                    {/* Candidate Photo */}
+                                    <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-[2rem] overflow-hidden border-4 border-indigo-500/30 shadow-xl relative">
+                                        {winner?.photo_cid ? (
+                                            <img 
+                                                src={`/api/pre-election/ipfs-image/${winner.photo_cid}`} 
+                                                alt={winner.candidate_name}
+                                                className="w-full h-full object-cover"
+                                                onError={(e) => {
+                                                    e.target.onerror = null;
+                                                    e.target.src = "https://ui-avatars.com/api/?name=" + encodeURIComponent(winner.candidate_name) + "&background=random&size=256";
+                                                }}
+                                            />
+                                        ) : (
+                                            <div className="w-full h-full bg-slate-800 flex items-center justify-center text-gray-600">
+                                                No Photo
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {/* Symbol Photo */}
+                                    <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-[2rem] overflow-hidden border-4 border-emerald-500/30 shadow-xl relative bg-white p-2">
+                                        {winner?.symbol_cid ? (
+                                            <img 
+                                                src={`/api/pre-election/ipfs-image/${winner.symbol_cid}`} 
+                                                alt="symbol" 
+                                                className="w-full h-full object-contain" 
+                                            />
+                                        ) : (
+                                            <div className="w-full h-full flex items-center justify-center text-gray-600">
+                                                No Symbol
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
 
                                 <div className="text-center w-full">
                                     <h2 className="text-indigo-400 font-bold text-[10px] uppercase tracking-[0.2em] mb-2 sm:mb-3">Election Winner</h2>
-                                    <h3 className="text-2xl sm:text-4xl font-black mb-4 sm:mb-6 leading-tight truncate px-2">{winner?.candidate_name}</h3>
+                                    <h3 className="text-2xl sm:text-4xl font-black mb-6 leading-tight truncate px-2">{winner?.candidate_name}</h3>
                                     
                                     <div className="grid grid-cols-2 gap-3 sm:gap-4 w-full">
                                         <div className="bg-black/40 rounded-2xl p-3 sm:p-4 border border-white/5">
@@ -194,22 +215,14 @@ export default function ResultPage() {
                                             </p>
                                         </div>
                                     </div>
-                                    
-                                    {winner?.symbol_cid && (
-                                        <div className="mt-4 flex items-center justify-center gap-3 bg-white/5 py-2 px-4 rounded-2xl border border-white/5">
-                                            <div className="w-8 h-8 rounded-lg overflow-hidden bg-white p-1">
-                                                <img src={`/api/pre-election/ipfs-image/${winner.symbol_cid}`} alt="symbol" className="w-full h-full object-contain" />
-                                            </div>
-                                            <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{winner.party || 'Independent'}</span>
-                                        </div>
-                                    )}
+                                </div>
                                 </div>
                             </div>
-                        </div>
-                    </motion.div>
+                        </motion.div>
+                    )}
 
                     {/* Rankings Table */}
-                    <div className="lg:col-span-7 space-y-4 px-4 sm:px-0 mt-8 lg:mt-0">
+                    <div className={`${isTie ? 'lg:col-span-12' : 'lg:col-span-7'} space-y-4 px-4 sm:px-0 mt-8 lg:mt-0`}>
                         <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
                              <BarChart3 className="text-indigo-400" size={20} /> Candidate Standings
                         </h3>

@@ -7,13 +7,22 @@ import useAuthStore from "../../store/useAuthStore";
 export default function AuthorityElections() {
     const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState("ongoing");
-    const { username } = useAuthStore();
+    const { username, role } = useAuthStore();
     const [elections, setElections] = useState({
         ongoing: [],
         upcoming: [],
         completed: []
     });
     const [loading, setLoading] = useState(true);
+
+    // Protect Route & Fix Refresh Redirection
+    useEffect(() => {
+        if (!username || role !== "authority") {
+            if (role === "admin") navigate("/admin/dashboard");
+            else if (role === "user") navigate("/user/dashboard");
+            else navigate("/login");
+        }
+    }, [username, role, navigate]);
 
     useEffect(() => {
         const fetchElections = async () => {
@@ -186,8 +195,8 @@ function ElectionCard({ election, type, navigate }) {
                 </div>
             </div>
 
-            <div className="space-y-3">
-                {isCompleted ? (
+            {isCompleted && (
+                <div className="space-y-3">
                     <div className="flex flex-col gap-2">
                         <button
                             onClick={() => navigate(`/authority/dkg/dashboard/${election.id}`, { state: { authorityId: authority_id } })}
@@ -202,35 +211,8 @@ function ElectionCard({ election, type, navigate }) {
                             View Result
                         </button>
                     </div>
-                ) : (
-                    isUpcoming ? (
-                        <div className="flex flex-col gap-2">
-                            <button
-                                onClick={() => navigate(`/verify-voters/${election.id}`)}
-                                className="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold rounded-xl transition-all shadow-lg shadow-indigo-900/20"
-                            >
-                                Verify Pre-Election Voters
-                            </button>
-                            <button disabled className="w-full py-3 bg-white/5 border border-white/10 text-gray-400 cursor-not-allowed font-bold rounded-xl transition-all flex items-center justify-center gap-2">
-                                <Lock size={16} />
-                                <span>Starts Soon</span>
-                            </button>
-                        </div>
-                    ) : (
-                        <div className="flex flex-col gap-2">
-                            <button
-                                onClick={() => navigate(`/verify-voters/${election.id}`)}
-                                className="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold rounded-xl transition-all shadow-lg shadow-indigo-900/20"
-                            >
-                                Verify Pre-Election Voters
-                            </button>
-                            <div className="w-full py-3 text-center text-gray-400 text-xs font-mono border border-white/5 rounded-xl bg-white/5">
-                                Election Ongoing
-                            </div>
-                        </div>
-                    )
-                )}
-            </div>
+                </div>
+            )}
         </motion.div>
     );
 }
