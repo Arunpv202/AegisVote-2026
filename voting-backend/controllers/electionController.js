@@ -197,6 +197,10 @@ exports.completeSetup = async (req, res) => {
         if (!onChainDetails || !onChainDetails.initialized) {
             return res.status(404).json({ message: 'Election not found on blockchain' });
         }
+        //if election already setup, prevent duplicate setup
+        if (onChainDetails.setupDone) {
+            return res.status(400).json({ message: 'Election setup already completed on blockchain' });
+        }
 
         // ── Step 1: Fetch all APPROVED submissions ───────────────────────────────
         const approvedSubmissions = await SubmissionIPFS.findAll({

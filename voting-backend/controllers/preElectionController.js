@@ -381,6 +381,11 @@ exports.verifySubmission = async (req, res) => {
         if (onChainElection.creatorName !== adminUsername) {
             return res.status(403).json({ message: "Unauthorized. Only the election creator can verify submissions." });
         }
+        //if election setup is done verification should not be allowed
+        if (onChainElection.setupDone) {
+            return res.status(400).json({ message: "Election setup is complete. Verification is not allowed." });
+        }
+
         const preElectionEndTimeMs = Number(onChainElection.preelectionDataEndTime) * 1000;
         if (Date.now() < preElectionEndTimeMs) {
             return res.status(400).json({ message: "The pre-election registration phase has not ended yet. Verification is not allowed." });

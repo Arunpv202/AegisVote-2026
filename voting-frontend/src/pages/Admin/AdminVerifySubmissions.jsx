@@ -367,6 +367,7 @@ export default function AdminVerifySubmissions() {
     const [setupResult, setSetupResult] = useState(null);
     const [setupError, setSetupError] = useState(null);
     const [sessionKey, setSessionKey] = useState("");
+    const [userSearch, setUserSearch] = useState("");
 
     const handleSearch = async (e) => {
         e?.preventDefault();
@@ -375,6 +376,7 @@ export default function AdminVerifySubmissions() {
         setError(null);
         setSelected(null);
         setSubmissions([]);
+        setUserSearch("");
         try {
             const res = await fetch(`/api/pre-election/${electionId.trim()}/submissions`, {
                 headers: { Authorization: `Bearer ${token}` }
@@ -416,11 +418,19 @@ export default function AdminVerifySubmissions() {
     };
 
     const filtered = submissions.filter(s => {
-        if (filter === "all") return true;
-        if (filter === "pending") return s.status === "pending";
-        if (filter === "voters") return s.role === "voter";
-        if (filter === "candidates") return s.role === "candidate";
-        return true;
+        // Role / status filter
+        const passesFilter =
+            filter === "all" ? true :
+            filter === "pending" ? s.status === "pending" :
+            filter === "voters" ? s.role === "voter" :
+            filter === "candidates" ? s.role === "candidate" : true;
+
+        // Username search filter
+        const passesSearch = userSearch.trim() === ""
+            ? true
+            : s.username.toLowerCase().includes(userSearch.trim().toLowerCase());
+
+        return passesFilter && passesSearch;
     });
 
     const counts = {
@@ -510,7 +520,28 @@ export default function AdminVerifySubmissions() {
                         {/* Two-Panel Layout */}
                         <div className="flex-1 grid grid-cols-1 md:grid-cols-[320px_1fr] gap-4 min-h-0">
                             {/* Left: Submission List */}
-                            <div className="overflow-y-auto space-y-2 pr-1">
+                            <div className="flex flex-col min-h-0">
+                                {/* Username search bar */}
+                                <div className="relative mb-3">
+                                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" size={15} />
+                                    <input
+                                        type="text"
+                                        value={userSearch}
+                                        onChange={e => setUserSearch(e.target.value)}
+                                        placeholder="Search by username..."
+                                        className="w-full bg-slate-900/60 border border-white/10 rounded-xl py-2.5 pl-9 pr-4 text-sm outline-none focus:border-indigo-500/50 placeholder:text-gray-600 transition-colors"
+                                    />
+                                    {userSearch && (
+                                        <button
+                                            onClick={() => setUserSearch("")}
+                                            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors"
+                                            title="Clear search"
+                                        >
+                                            <XCircle size={15} />
+                                        </button>
+                                    )}
+                                </div>
+                                <div className="overflow-y-auto space-y-2 pr-1 flex-1">
                                 {filtered.length === 0 ? (
                                     <div className="text-center text-gray-500 py-10 text-sm">
                                         <AlertCircle className="mx-auto mb-2" size={24} />
@@ -540,6 +571,7 @@ export default function AdminVerifySubmissions() {
                                         <ChevronRight size={16} className="text-gray-600 shrink-0" />
                                     </motion.button>
                                 ))}
+                                </div>
                             </div>
 
                             {/* Right: Detail Panel */}
